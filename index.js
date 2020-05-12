@@ -1,0 +1,4 @@
+function ciao()
+{
+    alert("ciao");
+}
