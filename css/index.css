@@ -22,3 +22,19 @@ p
 {
     color: #707793;
 }
+
+.border-circle
+{
+    border: 1px solid #707793;
+    border-radius: 20px;
+}
+
+#title
+{
+    font-size: 36px;
+}
+
+.text-center
+{
+    text-align: center;
+}
