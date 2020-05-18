@@ -1,21 +1,12 @@
-
-
-  @font-face {
-    font-family: Simp; 
-    src: url(/fonts/simplifica.ttf) format('truetype'); 
-    font-weight: normal;
-}
-
 body
 {
-    background-color: #2E3047;
-    font-family: 'Simp';
+    background-color: #2E3047 !important;
+    font-family: 'Nunito', sans-serif !important;
 }
 
 h1
 {
-    font-family: 'Simp';
-    color: #3BBA9C;
+    color: #3BBA9C !important;
 }
 
 h2
