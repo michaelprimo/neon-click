@@ -1,7 +1,11 @@
+
 body
 {
     background-color: #2E3047 !important;
+    background: rgb(46,48,71);
+    background: linear-gradient(90deg, rgba(46,48,71,1) 33%, rgba(60,63,88,1) 66%);
     font-family: 'Nunito', sans-serif !important;
+    color: #3BBA9C !important;
 }
 
 h1
@@ -30,14 +34,47 @@ p
     border-radius: 20px;
 }
 
-#title
-{
-    font-size: 108px;
-    margin-bottom: 0;
-}
 
 .text-center
 {
     text-align: center;
 }
 
+.little-image
+{
+    width: 30%;
+}
+
+.background-post
+{
+    background-color: #707793;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#title
+{
+    display: block;
+    font-size: 48px;
+    margin-bottom: 0;
+    text-decoration: none !important;
+    color: #3BBA9C !important;
+}
+
+.link-color
+{
+    color: #3BBA9C !important;
+    text-decoration: none;
+}
+
+.link-color:hover, .link-color:visited, .link-color:link, .link-color:active
+{
+    text-decoration: none;
+}
+
+.social-image
+{
+    margin-top: 20px;
+    width: 36px;
+    text-align: center;
+}
