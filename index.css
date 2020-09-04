@@ -101,3 +101,24 @@ p
     max-width: 100%;
     height: auto;
 }
+
+#buttonOctopus
+{
+    background: #5e7783;
+    background: linear-gradient(0deg, rgba(94,119,131,1) 100%, rgba(17,36,50,1) 100%);
+    
+    cursor:pointer;
+    border: 1px solid black;
+    font-size: 30px;
+    text-align: center;
+    box-shadow: 3px 3px 3px 3px #5e7783;
+    border-radius: 50%;
+    color: #d0d1d3;
+    width: 50px;
+    height: 50px;
+}
+
+tr
+{
+    margin: 20px;
+}
