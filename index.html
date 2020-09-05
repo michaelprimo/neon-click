@@ -9,35 +9,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="index.css" type="text/css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,600&display=swap" rel="stylesheet">
-        <script data-ad-client="ca-pub-2639854597140581" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     </head>
     <body>
     <h1 class="headerText">60 Seconds!</h1>
     <p><button id="buttonReset" class="center buttonResetSize" value="Reset Game"></button></p>
     <p class="headerText">Level: <span id="levelsText">1</span> <span id="levelsMaxText"> 1</span> </p>
+    <div id="boxSize" class="center"><p id="gameOverText" class="headerText ">Reach the exact amount of points for win!</p><div class="sharethis-inline-share-buttons"></div></div>
     
-    <table class="center">
-        <tr>
-            <td id="button0"  class="numberText buttonSize" value="1"></td>
-            <td id="button1"  class="numberText buttonSize" value="2"></td>
-            <td id="button2"  class="numberText buttonSize" value="3"></td>
-        </tr>
-        <tr>
-            <td id="button3"  class="numberText buttonSize" value="4"></td>
-            <td id="buttonOctopus"><span id="curPointsText">0</span>/<span id="maxPointsText">0</span></td>
-            <td id="button4"  class="numberText buttonSize" value="5"></td>
-        </tr>
-        <tr>
-            <td id="button5"  class="numberText buttonSize" value="6"></td>
-            <td id="button6"  class="numberText buttonSize" value="7"></td>
-            <td id="button7"  class="numberText buttonSize" value="8"></td>
-        </tr>
+    <div id="mainGame" class="center">
+        
+            <div id="button0"  class="numberText buttonSize" value="1"></div>
+            <div id="button1"  class="numberText buttonSize" value="2"></div>
+            <div id="button2"  class="numberText buttonSize" value="3"></div>
+            <div class="break"></div>
+
+            <div id="button3"  class="numberText buttonSize" value="4"></div>
+            <div id="buttonOctopus"><span id="curPointsText">0</span>/<span id="maxPointsText">0</span></div>
+            <div id="button4"  class="numberText buttonSize" value="5"></div>
+            <div class="break"></div>
+            
+            <div id="button5"  class="numberText buttonSize" value="6"></div>
+            <div id="button6"  class="numberText buttonSize" value="7"></div>
+            <div id="button7"  class="numberText buttonSize" value="8"></div>
+       
+    </div>
     
-    </table>
-    <p id="gameOverText" class="headerText">Reach the exact amount of points for win!</p>
-    <p class="headerText"><img id="resizeimg" src="misticallogo2.png"></p>
+    <!--p class="headerText"><img id="resizeimg" src="misticallogo2.png"></p-->
     
     <script src="index.js"></script>
-    
     </body>
 </html>

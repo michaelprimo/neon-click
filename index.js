@@ -8,13 +8,11 @@ let curPoints = 0;
 let maxPoints = 1;
 // The real "points" of the game.
 let levels = 0;
-
-let maxLevel = localStorage.getItem("maxLevels");
 // This array store all the variables/numbers of the buttons.
 var values = [];
 // This array store the information about if one particular button is pressed or not.
 var toggle = [];
-
+//This will set up the maximum time of the game.
 const maxSeconds = 60;
 // The time of the game in seconds.
 var seconds = maxSeconds;
@@ -69,17 +67,21 @@ function init()
 function resetLevelsTimer()
 {
     levels = 0;
-    seconds = 60;
+    seconds = maxSeconds;
     gameOver = false;
     curPoints = 0;
     //for solving the bug of the counter text
     seconds += 0.02;
     document.getElementById("gameOverText").innerHTML = "Reach the exact amount of points for win!";
-    save();
-    if(levels > maxLevel)
-    {
-        localStorage.setItem("maxLevels", levels);
-    }
+    document.getElementById("mainGame").classList.remove("fadeOut");
+    document.getElementById("mainGame").classList.add("fadeIn");
+    document.getElementById('mainGame').classList.remove("hide");
+    document.getElementById('mainGame').classList.add("show");
+    checkMaxPoints();
+    document.getElementById("boxSize").classList.add("fadeOut");
+    document.getElementById("boxSize").classList.remove("fadeIn");
+    document.getElementById("boxSize").classList.add("hide");
+    document.getElementById("boxSize").classList.remove("show");
 }
 
 //Every number of the buttons will be 1 and not pressed.
@@ -143,10 +145,17 @@ function updateText()
     document.getElementById("levelsText").innerHTML = levels;
 
     //recall the function every 10 milliseconds.
-    document.getElementById("levelsMaxText").innerHTML = "Max: " + localStorage.getItem("maxLevels");
-
+    if(localStorage.getItem("maxLevels") !== null)
+    {
+        document.getElementById("levelsMaxText").innerHTML = "Max: " + localStorage.getItem("maxLevels");
+    }
+    else
+    {
+        localStorage.setItem('maxLevels', 0);
+    }
     document.getElementById("buttonOctopus").style.backgroundImage = "linear-gradient(0deg, rgba(94,119,131,1) "
      + (seconds/maxSeconds) * 100 + "%, rgba(17,36,50,1) " + (seconds/maxSeconds) * 100 + "%)";
+
     textHandle=setTimeout(updateText, 1);
 }
 
@@ -209,6 +218,7 @@ function generatePermutatedNumber(i)
 //verify if the combination is correct or not.
 function checkPoints(numberValue)
 {
+    
     let anim;
 
     // this combination is correct
@@ -244,10 +254,7 @@ function levelUp()
     //get one more level
     levels++;
 
-    if(levels > maxLevel)
-    {
-        localStorage.setItem("maxLevels", levels);
-    }
+    checkMaxPoints();
 
      //every button pressed for a combination receive an extra point of value. 
      for(var i = 0; i < values.length; i++)
@@ -281,7 +288,7 @@ function resetButtonsScore()
 function countdown() {
     
     seconds -= 0.1;
-    console.log(seconds);
+    
     
     //if the player have time
     if( seconds > 0) 
@@ -302,13 +309,18 @@ function countdown() {
 
 function gameOverState()
 {
+    document.getElementById("mainGame").classList.add("fadeOut");
+    document.getElementById("mainGame").classList.remove("fadeIn");
+    document.getElementById('mainGame').classList.add("hide");
+    document.getElementById('mainGame').classList.remove("show");
+    document.getElementById("boxSize").classList.remove("fadeOut");
+    document.getElementById("boxSize").classList.add("fadeIn");
+    document.getElementById('boxSize').classList.add("show");
+    document.getElementById('boxSize').classList.remove("hide");
     document.getElementById("gameOverText").innerHTML = "Game Over! You reached level " + levels + "!";
     gameOver = true;
     seconds = 0.01;
-    if(levels > maxLevel)
-    {
-        localStorage.setItem('maxLevels', levels);
-    }
+    checkMaxPoints();
     for(var i = 0; i < buttonClick.length; i++)
     {
         values[i] = 0;
@@ -395,33 +407,11 @@ function errorAnimation()
     }
 }
 
-function save()
+function checkMaxPoints()
 {
-    if (typeof(Storage) !== "undefined") {
-        if (localStorage.maxLevels) {
-          localStorage.getItem("maxLevels");
-        } else {
-          localStorage.setItem("maxLevels", 0);
-        }
-        
-      }
+    
+    if(levels > localStorage.getItem("maxLevels"))
+    {
+        localStorage.setItem('maxLevels', levels);
+    }
 }
-
-const perfectFrameTime = 1000 / 60;
-let deltaTime = 0;
-let lastTimestamp = 0;
-
-function start() {
-    requestAnimationFrame(update);
-}
-
-function update(timestamp) {
-    requestAnimationFrame(update);
-    deltaTime = (timestamp - lastTimestamp) / perfectFrameTime;
-    lastTimestamp = timestamp;
-
-    // YOUR FRAME CODE HERE!
-
-}
-
-start();

@@ -18,19 +18,27 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    flex-wrap: wrap;
   }
+
+  table {
+    border-collapse: collapse;
+ }
 
 .numberText
 {
-    background-color: #9e9199;
+    background-color: #0A0A08;
     background-repeat:no-repeat;
     cursor:pointer;
     border: 1px solid black;
     font-size: 40px;
     text-align: center;
-    box-shadow: 3px 3px 3px 3px #5e7783;
+    box-shadow: 1px 1px 3px 7px #5e7783;
     border-radius: 20%;
     color: #d0d1d3;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .rightAlign
@@ -46,7 +54,7 @@
 
 body
 {
-    background: #112432;
+    background: #0A0A08;
     background-position: center 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -68,8 +76,8 @@ body
 
 .buttonSize
 {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
 }
 
 
@@ -106,19 +114,83 @@ p
 {
     background: #5e7783;
     background: linear-gradient(0deg, rgba(94,119,131,1) 100%, rgba(17,36,50,1) 100%);
-    
+    margin: 0px 3px;
     cursor:pointer;
     border: 1px solid black;
     font-size: 30px;
     text-align: center;
-    box-shadow: 3px 3px 3px 3px #5e7783;
+    box-shadow: 1px 1px 3px 7px #5e7783;
     border-radius: 50%;
     color: #d0d1d3;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-tr
+#mainGame
 {
-    margin: 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
+
+div
+{
+    margin: 3px 8px;
+}
+
+#mainGame
+{
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+ }
+ 
+ .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+ }
+
+ 
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+ }
+ 
+ .fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+ }
+ 
+ .show
+ {
+    opacity: 1;
+    display: block;
+    visibility: visible;
+ }
+
+ .hide
+ {
+    opacity: 0 !important;
+    display: none !important;
+    visibility: hidden;
+ }
+
+ #boxSize
+ {
+     border: 1px solid green;
+     width: 240px;
+     height: 240px; 
+ }
+
+ .break {
+    flex-basis: 100%;
+    height: 0;
+  }
