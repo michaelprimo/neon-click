@@ -54,7 +54,8 @@
 
 body
 {
-    background: #0A0A08;
+    user-select: none;
+    background-color: #0A0A08;
     background-position: center 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
