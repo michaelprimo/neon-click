@@ -27,7 +27,6 @@ function setMaxPoints()
     {
         //A "token" will be put on a array with the same length of all the buttons. 
         randToken[randGenerator[i]]++;
-        console.log(randToken);
     }
 
     //this is the "second part" of the check, we will analyze the array "randToken" and see if the combination was illegal or not. 
@@ -104,7 +103,7 @@ function gameOverState()
     document.getElementById("boxSize").classList.add("fadeIn");
     document.getElementById('boxSize').classList.add("show");
     document.getElementById('boxSize').classList.remove("hide");
-    document.getElementById("gameOverText").innerHTML = "Game Over! You reached level " + levels + "!";
+    document.getElementById("gameOverText").innerHTML = "Game Over! You reached level: " + levels + " And your max is: " + localStorage.getItem("maxLevels") + "!";
     gameOver = true;
     seconds = 0.01;
     checkMaxPoints();

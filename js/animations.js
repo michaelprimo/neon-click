@@ -6,7 +6,7 @@ let palette =
     "#dfff11",
     "#21fc0d",
     "#01f9c6",
-    "0ff0fc",
+    "#0ff0fc",
     "#6600ff",
     "#ff08e8",
     "#ff11ff",
@@ -15,10 +15,9 @@ let palette =
 
 function timeAnimation()
 {
-    document.getElementById("buttonOctopus").style.backgroundImage = "linear-gradient(0deg, rgba(94,119,131,1) "
+    document.getElementById("buttonOctopus").style.backgroundImage = "linear-gradient(0deg, rgba(58, 17, 230)"
     + (seconds/maxSeconds) * 100 + "%, rgba(17,36,50,1) " + (seconds/maxSeconds) * 100 + "%)";
 }
-
 
 function errorAnimation()
 {

@@ -34,17 +34,7 @@ function updateText()
     document.getElementById("curPointsText").innerHTML = curPoints;
     // update the text to the actual level value.
     document.getElementById("levelsText").innerHTML = levels;
-
-    //recall the function every 10 milliseconds.
-    if(localStorage.getItem("maxLevels") !== null)
-    {
-        document.getElementById("levelsMaxText").innerHTML = "Max: " + localStorage.getItem("maxLevels");
-    }
-    else
-    {
-        localStorage.setItem('maxLevels', 0);
-    }
    
     timeAnimation();
-    textHandle=setTimeout(updateText, 1);
+    textHandle=setTimeout(updateText, 100);
 }

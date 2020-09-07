@@ -8,7 +8,7 @@ function checkPoints(numberValue)
     // this combination is correct
     if(curPoints === maxPoints)
     {
-        seconds++;
+        //seconds++;
         //the player gets another level
         levelUp();
         // make every button not pressed

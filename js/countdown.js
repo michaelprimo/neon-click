@@ -6,13 +6,15 @@ const maxSeconds = 60;
 var seconds = maxSeconds;
 //manage the timeout handle.
 let timeoutHandle;
+//helps to change the main button's color.
+let changeColor = 0;
 
 // start or stop the countdown
 function countdown() {
     
     seconds -= 0.1;
-    
-    
+    console.log(seconds);
+
     //if the player have time
     if( seconds > 0) 
     {

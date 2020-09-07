@@ -1,3 +1,5 @@
+let colorNames = ["red", "orange", "yellow", "green", "teal", "cyan", "blue", "magenta", "pink", "purple"];
+let boolPressed = false;
 // Seek all the buttons with the .numberText class and store in this variable.  
 var buttonClick = document.querySelectorAll(".numberText");
 
@@ -43,16 +45,6 @@ function pressAnimation()
     }
 }
 
-function editButtonsText()
-{
-    // This for loop gets all the buttons and then update the text at the number of values[] to the respective button.
-    for(var i = 0; i < buttonClick.length; i++)
-    {
-        document.getElementById("button" + i).innerHTML = values[i];
-        // call the function for every button.
-        setClassButtons(i);
-    }
-}
 
 
 //make the buttons clickable
@@ -100,19 +92,47 @@ function setButtons(i)
     
 }
 
-// Verify if to put or remove certain classes on certain conditions of the buttons.
-function setClassButtons(i)
+
+function editButtonsText()
 {
-    //remove the class because the button is not pressed. 
-    if(toggle[i] === false)
+    // This for loop gets all the buttons and then update the text at the number of values[] to the respective button.
+    for(var i = 0; i < buttonClick.length; i++)
     {
-        document.getElementById("button" + i).classList.remove("pressedButton");
+        document.getElementById("button" + i).innerHTML = values[i];
+
+        // Verify if to put or remove certain classes on certain conditions of the buttons.
+
+        // remove the class because the button is not pressed. 
+        if(toggle[i] === false)
+        {
+            boolPressed = false;
+        }
+        //put the class because the button is pressed. 
+        else
+        {
+            boolPressed = true;   
+        }
+
+        for(var j = 0; j < colorNames.length; j++)
+        {
+            if(values[i] % colorNames.length == j)
+            {
+                
+                for(var k = 0; k < colorNames.length; k++)
+                {
+                    document.getElementById("button" + i).classList.remove(colorNames[k]);
+                    document.getElementById("button" + i).classList.remove("white");
+                }
+                if(boolPressed == true)
+                {
+                    document.getElementById("button" + i).classList.add("white");
+                }
+                else
+                {
+                    document.getElementById("button" + i).classList.add(colorNames[j]);
+                }
+                
+            }
+        }
     }
-    //put the class because the button is pressed. 
-    else
-    {
-        document.getElementById("button" + i).classList.add("pressedButton");
-    }
-    
-    
 }
