@@ -15,8 +15,8 @@ let palette =
 
 function timeAnimation()
 {
-    document.getElementById("buttonOctopus").style.backgroundImage = "linear-gradient(0deg, rgba(58, 17, 230)"
-    + (seconds/maxSeconds) * 100 + "%, rgba(17,36,50,1) " + (seconds/maxSeconds) * 100 + "%)";
+    document.getElementById("buttonOctopus").style.backgroundImage = "linear-gradient(0deg, rgba(93, 93, 93, 1)"
+    + (seconds/maxSeconds) * 100 + "%, rgba(0,0,0,1) " + (seconds/maxSeconds) * 100 + "%)";
 }
 
 function errorAnimation()

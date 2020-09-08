@@ -253,7 +253,7 @@ p
 #buttonOctopus
 {
     background: #5e7783;
-    background: linear-gradient(0deg, rgb(58, 17, 120) 100%, rgba(17,36,50,1) 100%);
+    background: linear-gradient(0deg, #5D5D5D 100%, rgba(17,36,50,1) 100%);
     margin: 0px 3px;
     cursor:pointer;
     border: 1px solid black;
