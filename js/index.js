@@ -20,9 +20,6 @@ function init()
     gameOver = false;
 }
 
-
-
-
 // Update all the text in the game
 function updateText()
 {
@@ -38,3 +35,12 @@ function updateText()
     timeAnimation();
     textHandle=setTimeout(updateText, 100);
 }
+
+
+// index.js
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+        .register("sw.js")
+        .then(() => console.log("registered service worker!"));
+}
+// the rest of your page's code...

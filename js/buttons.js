@@ -2,6 +2,9 @@ let colorNames = ["red", "orange", "yellow", "green", "teal", "cyan", "blue", "m
 let boolPressed = false;
 // Seek all the buttons with the .numberText class and store in this variable.  
 var buttonClick = document.querySelectorAll(".numberText");
+//set pause
+let pauseEnabled = false;
+
 
  // Set the main buttons.
  for(var x = 0; x < buttonClick.length; x++)
@@ -12,6 +15,9 @@ var buttonClick = document.querySelectorAll(".numberText");
 
 //Set the reset button by calling the function.
 setResetButton();
+
+//Set the pause button by calling the function.
+setPauseButton();
 
 //give a functionality to the reset button.
 function setResetButton()
@@ -28,8 +34,46 @@ function setResetButton()
         init();
         pressAnimation();
     }, false);
-    //Change the text of the button.
-    document.getElementById("buttonReset").innerHTML = "Reset";
+}
+
+//give a functionality to the pause button.
+function setPauseButton()
+{
+    //mouse version of clicking the reset button
+    document.getElementById("buttonPause").addEventListener('mousedown', function() {
+        //call this function if user click reset button.
+        pauseEnabled = !pauseEnabled;
+        if(pauseEnabled == false)
+        {
+            document.getElementById("mainGame").classList.remove("fadeOut");
+            document.getElementById("mainGame").classList.add("fadeIn");
+            document.getElementById('mainGame').classList.remove("hide");
+            document.getElementById('mainGame').classList.add("show");
+            document.getElementById("boxSize").classList.add("fadeOut");
+            document.getElementById("boxSize").classList.remove("fadeIn");
+            document.getElementById('boxSize').classList.remove("show");
+            document.getElementById('boxSize').classList.add("hide");
+            //reset the "start" variable.
+            start = new Date().getTime();
+            //this helps avoiding artificial lags when unpausing the game. 
+            time = 0;
+            //activate the countdown if the player unpause the game.
+            countdown();
+        }
+        else
+        {
+            document.getElementById("mainGame").classList.add("fadeOut");
+            document.getElementById("mainGame").classList.remove("fadeIn");
+            document.getElementById('mainGame').classList.add("hide");
+            document.getElementById('mainGame').classList.remove("show");
+            document.getElementById("boxSize").classList.remove("fadeOut");
+            document.getElementById("boxSize").classList.add("fadeIn");
+            document.getElementById('boxSize').classList.add("show");
+            document.getElementById('boxSize').classList.remove("hide");
+            document.getElementById("gameOverText").innerHTML = "Paused";
+        }
+        pressAnimation();
+    }, false);
 }
 
 function pressAnimation()

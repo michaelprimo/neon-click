@@ -17,6 +17,7 @@ function checkPoints(numberValue)
         //seconds++;
         if(levels == 1)
         {
+            start = new Date().getTime()
             //activate the countdown if the player solve the first level.
             countdown();
         }

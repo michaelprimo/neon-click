@@ -13,10 +13,21 @@
     font-family: automania;
     font-weight: 400;
     font-size: 60px;
+    background-color: inherit !important;
 }
 
 .headerText
 {
+    font-family: automania;
+    text-align: center;
+    font-size: 30px;
+    color: #d0d1d3;
+    margin: 10px;
+}
+
+.boxText
+{
+    font-family: simplifica;
     text-align: center;
     font-size: 30px;
     color: #d0d1d3;
@@ -66,131 +77,6 @@
     text-align: right;
 }
 
-.white
-{
-    animation-name: pressColor;
-    box-shadow: 1px 0px 3px 5px;
-    top: 4px;
-}
-
-@keyframes pressColor
-{
-    0% { color: #ffffffb3; background-color: #5D5D5Db3;}
-    100% {color: #ffffffff; background-color: #5D5D5Dff;}
-}
-
-.red
-{
-    animation-name: redColor;   
-}
-
-@keyframes redColor
-{
-    0% { color: #fc0e3480; background-color: #5D000080;}
-    100% {color: #fc0e34ff; background-color: #5D0000ff;}
-}
-
-.orange
-{
-    animation-name: orangeColor;   
-}
-
-@keyframes orangeColor
-{
-    0% { color: #ffcf0980; background-color: #61490080;}
-    100% {color: #ffcf09ff; background-color: #614900ff;}
-}
-
-.yellow
-{
-    animation-name: yellowColor;   
-}
-
-@keyframes yellowColor
-{
-    0% { color: #dfff1180; background-color: #45420b80;}
-    100% {color: #dfff11ff; background-color: #45420bff;}
-} 
-
-.green
-{
-    animation-name: greenColor;   
-}
-
-@keyframes greenColor
-{
-    0% { color: #21fc0d80; background-color: #2e4c0180;}
-    100% {color: #21fc0dff; background-color: #2e4c01ff;}
-} 
-
-.teal
-{
-    animation-name: tealColor;   
-}
-
-@keyframes tealColor
-{
-    0% { color: #01f9c680; background-color: #14542d80;}
-    100% {color: #01f9c6ff; background-color: #14542dff;}
-} 
-
-.cyan
-{
-    animation-name: cyanColor;   
-}
-
-@keyframes cyanColor
-{
-    0% { color: #0ff0fc80; background-color: #285d5380;}
-    100% {color: #0ff0fcff; background-color: #285d53ff;}
-} 
-
-.blue
-{
-    animation-name: blueColor;   
-}
-
-@keyframes blueColor
-{
-    0% { color: #6600ff80; background-color: #05034780;}
-    100% {color: #6600ffff; background-color: #050347ff;}
-} 
-
-.magenta
-{
-    animation-name: magentaColor;   
-}
-
-@keyframes magentaColor
-{
-    0% { color: #ff08e880; background-color: #45086780;}
-    100% {color: #ff08e8ff; background-color: #450867ff;}
-} 
-
-.pink
-{
-    animation-name: pinkColor;   
-}
-
-@keyframes pinkColor
-{
-    0% { color: #f800a380; background-color: #5c024a80;}
-    100% {color: #f800a3ff; background-color: #5c024aff;}
-} 
-
-.purple
-{
-    animation-name: purpleColor;   
-}
-
-@keyframes purpleColor
-{
-    0% { color: #bc13fe80; background-color: #2b034180;}
-    100% {color: #bc13feff; background-color: #2b0341ff;}
-} 
-
-
-
 body
 {
     user-select: none;
@@ -221,21 +107,58 @@ body
 }
 
 
-.buttonResetSize
+.bigButtonSize
 {
-    width: 160px;
-    height: 80px;
+    /*width: 50px;*/
+    height: 50px;
+    margin: 0px 20px;
 }
 
 #buttonReset
 {
-    background-color: #9e9199;
+    background-color: #000000;
     cursor:pointer;
     border: 1px solid black;
     font-size: 40px;
     text-align: center;
     color: #d0d1d3;
-    box-shadow: 3px 3px 3px 3px #5e7783;
+    box-shadow: 1px 1px 12px 12px rgb(255, 0, 0);
+    font-family: 'simplifica';
+}
+
+#buttonPause
+{
+    background-color: #000000;
+    cursor:pointer;
+    border: 1px solid black;
+    font-size: 40px;
+    text-align: center;
+    color: #d0d1d3;
+    box-shadow: 1px 1px 12px 12px rgb(255, 255, 1);
+    font-family: 'simplifica';
+}
+
+#buttonMission
+{
+    background-color: #000000;
+    cursor:pointer;
+    border: 1px solid black;
+    font-size: 40px;
+    text-align: center;
+    color: #d0d1d3;
+    box-shadow: 1px 1px 12px 12px rgb(3, 255, 3);
+    font-family: 'simplifica';
+}
+
+#buttonShare
+{
+    background-color: #000000;
+    cursor:pointer;
+    border: 1px solid black;
+    font-size: 40px;
+    text-align: center;
+    color: #d0d1d3;
+    box-shadow: 1px 1px 12px 12px rgb(166, 0, 255);
     font-family: 'simplifica';
 }
 
@@ -259,7 +182,7 @@ p
     border: 1px solid black;
     font-size: 30px;
     text-align: center;
-    box-shadow: 1px 1px 3px 7px;
+    box-shadow: 1px 4px 4px 4px;
     border-radius: 50%;
     color: #d0d1d3;
     width: 70px;
@@ -267,6 +190,7 @@ p
     display:flex;
     justify-content:center;
     align-items:center;
+    z-index: 1;
 }
 
 #mainGame
@@ -278,7 +202,7 @@ p
 
 div
 {
-    margin: 3px 8px;
+    margin: 1px 4px;
 }
 
 #mainGame
@@ -325,12 +249,61 @@ div
 
  #boxSize
  {
-     border: 1px solid green;
      width: 240px;
      height: 240px; 
+     box-shadow: 1px 1px 10px 10px;
+    color: white;
  }
 
  .break {
     flex-basis: 100%;
     height: 0;
   }
+
+#levelsText
+{
+    font-size: 48px;
+}
+
+.horizontal_space
+{
+    margin-right: 20px;
+    margin-left: 5px;
+}
+
+.facebook-share-button {
+    color: #394f9f;
+    font-size: 14px;
+    display: block;
+    float: left;
+    display: contents;
+}
+
+.twitter-button-wrapper
+{
+    font-size: 14px;
+    margin-right: 10px;
+    width: 61px;
+    background-color: #1c96e0;
+    border-radius: 3px;
+    color: #776e65;
+    font-family: clear sans,helvetica neue,Arial,sans-serif;
+    display: inline-block;
+}
+
+a
+{
+    font-weight: 700;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.button_top
+{
+    margin-top: 5px;
+}
+
+.button_bottom
+{
+    margin-bottom: 5px;
+}
