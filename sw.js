@@ -1,20 +1,20 @@
 // sw.js
 
 const ASSETS = [
-    "animations.js",
-    "buttons.js",
-    "check.js",
-    "countdown.js",
-    "generate.js",
-    "index.js",
-    "reset.js",
-    "state.js",
-    "sw.js",
-    "/AUTOMANI.ttf",
-    "/colorAnimation.css",
-    "/index.css",
-    "/index.html",
-    "/SIMPLIFICA.ttf"
+    "/animations.js",
+    "/buttons.js",
+    "/check.js",
+    "/countdown.js",
+    "/generate.js",
+    "/index.js",
+    "/reset.js",
+    "/state.js",
+    "/sw.js",
+    "AUTOMANI.ttf",
+    "colorAnimation.css",
+    "index.css",
+    "index.html",
+    "SIMPLIFICA.ttf"
 ];
 
 
@@ -39,7 +39,7 @@ self.addEventListener("fetch", event => {
 });
 
 self.addEventListener("fetch", event => {
-    if (event.request.url === "https://www.simicart.com/") {
+    if (event.request.url === "https://www.michaelprimo.it/") {
         // or whatever your app's URL is
         event.respondWith(
             fetch(event.request).catch(err =>
