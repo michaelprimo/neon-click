@@ -1,20 +1,21 @@
 // sw.js
 
 const ASSETS = [
-    "/animations.js",
-    "/buttons.js",
-    "/check.js",
-    "/countdown.js",
-    "/generate.js",
-    "/index.js",
-    "/reset.js",
-    "/state.js",
-    "/sw.js",
-    "AUTOMANI.ttf",
-    "colorAnimation.css",
-    "index.css",
-    "index.html",
-    "SIMPLIFICA.ttf"
+    "/js/animations.js",
+    "/js/buttons.js",
+    "/js/check.js",
+    "/js/countdown.js",
+    "/js/generate.js",
+    "/js/index.js",
+    "/js/reset.js",
+    "/js/state.js",
+    "/AUTOMANI.ttf",
+    "/colorAnimation.css",
+    "/index.css",
+    "/index.html",
+    "/SIMPLIFICA.ttf",
+    "/images/icons-192.png",
+    "/images/icons-512.png"
 ];
 
 
