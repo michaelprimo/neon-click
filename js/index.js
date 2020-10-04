@@ -15,7 +15,8 @@ const ASSETS = [
     "/index.html",
     "/SIMPLIFICA.ttf",
     "/images/icons-192.png",
-    "/images/icons-512.png"
+    "/images/icons-512.png",
+    "/manifest.webmanifest"
 ];
 
 //start the main functions
