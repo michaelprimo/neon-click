@@ -1,5 +1,25 @@
 // sw.js
 
+
+const ASSETS = [
+    "/js/animations.js",
+    "/js/buttons.js",
+    "/js/check.js",
+    "/js/countdown.js",
+    "/js/generate.js",
+    "/js/index.js",
+    "/js/reset.js",
+    "/js/state.js",
+    "/AUTOMANI.ttf",
+    "/colorAnimation.css",
+    "/index.css",
+    "/index.html",
+    "/SIMPLIFICA.ttf",
+    "/images/icons-192.png",
+    "/images/icons-512.png",
+    "/manifest.webmanifest"
+];
+
 let cache_name = "NeonCity"; // The string used to identify our cache
 
 self.addEventListener("install", event => {
@@ -23,7 +43,7 @@ self.addEventListener("fetch", event => {
         // or whatever your app's URL is
         event.respondWith(
             fetch(event.request).catch(err =>
-                self.cache.open(cache_name).then(cache => cache.match("/offline.html"))
+                self.cache.open(cache_name).then(cache => cache.match("/index.html"))
             )
         );
     } else {
