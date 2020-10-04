@@ -19,7 +19,7 @@ self.addEventListener("fetch", event => {
 });
 
 self.addEventListener("fetch", event => {
-    if (event.request.url === "https://www.michaelprimo.it/") {
+    if (event.request.url === "https://www.michaelprimo.it") {
         // or whatever your app's URL is
         event.respondWith(
             fetch(event.request).catch(err =>
