@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Neon City</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="index.css" type="text/css" rel="stylesheet">
+        <link href="colorAnimation.css" type="text/css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,600&display=swap" rel="stylesheet">
+        <link rel="manifest" href="/manifest.webmanifest">
+    </head>
+    <body>
+        <div id="fb-root"></div>
+     
+        <div id="nameText" class="headerText">
+            <span class="red animationEnabled" style="background-color: inherit !important";>N</span><span class="orange animationEnabled " style="background-color: inherit !important";>e</span><span class="yellow animationEnabled " style="background-color: inherit !important";>o</span><span class="green animationEnabled " style="background-color: inherit !important";>n</span> <span class="teal animationEnabled " style="background-color: inherit !important";>C</span><span class="blue animationEnabled " style="background-color: inherit !important";>i</span><span class="magenta animationEnabled " style="background-color: inherit !important";>t</span><span class="purple animationEnabled " style="background-color: inherit !important";>y</span> 
+        </div>
+
+        <div class="center">
+            <button id="buttonReset" class="bigButtonSize">Reset</button> 
+            <button id="buttonPause" class="bigButtonSize">Pause</button>
+            <!--button id="buttonMission" class="bigButtonSize">M</button--> 
+            <!--button id="buttonShare" class="bigButtonSize">S</button-->
+        </div>
+
+        <p class="headerText center"><span class="purple animationEnabled " style="background-color: inherit !important";>L</span><span class="orange animationEnabled " style="background-color: inherit !important";>e</span><span class="yellow animationEnabled " style="background-color: inherit !important";>v</span><span class="orange animationEnabled " style="background-color: inherit !important";>e</span><span class="purple animationEnabled " style="background-color: inherit !important";>l</span><span class="green animationEnabled horizontal_space " style="background-color: inherit !important";>:</span>  <span id="levelsText">1</span> </p>
+        <div id="boxSize" class="center">
+            <p id="gameOverText" class="boxText">Reach the exact amount of points for win!</p> 
+           <!-- <a target="_blank" class="facebook-share-button fbc-has-badge fbc-UID_1" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//">Facebook</a>
+            <div class="twitter-button-wrapper">
+                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=" target="_blank" data-size="default">
+                Tweet</a>
+            </div> -->
+        </div> 
+     
+    </div>
+        
+        <div id="mainGame" class="center">
+            
+                <div id="button0"  class="numberText buttonSize animationEnabled" value="1"></div>
+                <div id="button1"  class="numberText buttonSize button_bottom animationEnabled" value="2"></div>
+                <div id="button2"  class="numberText buttonSize animationEnabled" value="3"></div>
+                <div class="break"></div>
+
+                <div id="button3"  class="numberText buttonSize animationEnabled" value="4"></div>
+                <div id="buttonOctopus"><span id="curPointsText">0</span>/<span id="maxPointsText">0</span></div>
+                <div id="button4"  class="numberText buttonSize animationEnabled" value="5"></div>
+                <div class="break"></div>
+                
+                <div id="button5"  class="numberText buttonSize animationEnabled" value="6"></div>
+                <div id="button6"  class="numberText buttonSize button_top animationEnabled" value="7"></div>
+                <div id="button7"  class="numberText buttonSize animationEnabled" value="8"></div>
+        
+        </div>
+        
+        <!--p class="headerText"><img id="resizeimg" src="misticallogo2.png"></p-->
+        <script src="js/animations.js"></script>
+        <script src="js/countdown.js"></script>
+        <script src="js/reset.js"></script>
+        <script src="js/buttons.js"></script>
+        <script src="js/state.js"></script>
+        <script src="js/check.js"></script>
+        <script src="js/generate.js"></script>
+        <script src="js/index.js"></script>
+        <script src="sw.js"></script>
+    </body>
+</html>
