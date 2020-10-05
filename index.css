@@ -1,6 +1,6 @@
 @font-face {
     font-family: simplifica;
-    src: url(SIMPLIFICA.ttf);
+    src: url(Paralines-Regular.otf);
   }
 
   @font-face {
@@ -10,7 +10,7 @@
 
 #nameText
 {
-    font-family: automania;
+    font-family: simplifica;
     font-weight: 400;
     font-size: 60px;
     background-color: inherit !important;
