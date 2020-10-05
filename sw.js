@@ -17,6 +17,7 @@ const ASSETS = [
     "/SIMPLIFICA.ttf",
     "/images/icons-192.png",
     "/images/icons-512.png",
+    "/offline.html",
     "/manifest.webmanifest"
 ];
 
