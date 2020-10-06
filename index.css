@@ -18,7 +18,7 @@
 
 .headerText
 {
-    font-family: automania;
+    font-family: simplifica;
     text-align: center;
     font-size: 30px;
     color: #d0d1d3;
@@ -112,6 +112,11 @@ body
     /*width: 50px;*/
     height: 50px;
     margin: 0px 20px;
+}
+
+.imgButtonSize
+{
+    height: 30px;
 }
 
 #buttonReset
@@ -265,6 +270,7 @@ div
 #levelsText
 {
     font-size: 48px;
+    margin-left: 10px;
 }
 
 .horizontal_space
