@@ -97,6 +97,8 @@ body
 .errorButton
 {
     background-color: #4d1635;
+    -webkit-background-color: #4d1635;
+    -moz-background-color: #4d1635;
     box-shadow: none;
 }
 
