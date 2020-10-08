@@ -44,3 +44,10 @@ if ("serviceWorker" in navigator) {
         .then(() => console.log("registered service worker!"));
 }
 // the rest of your page's code...
+
+if (workbox) {
+    console.log(`Yay! Workbox is loaded 🎉`);
+  } else {
+    console.log(`Boo! Workbox didn't load 😬`);
+  }
+  

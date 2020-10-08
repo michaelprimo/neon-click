@@ -28,3 +28,11 @@ self.addEventListener('activate', (event) => {
 self.addEventListener(fetch, (event) => {
   console.log('Inside the fetch handler:', event);
 });
+
+import {registerRoute} from 'workbox-routing';
+import {NetworkFirst} from 'workbox-strategies';
+
+registerRoute(
+  ({request}) => request.destination === 'script',
+  new NetworkFirst()
+);
