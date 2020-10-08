@@ -1,5 +1,18 @@
 // sw.js
 
+let cache_name = "NeonCity"; // The string used to identify our cache
+
+self.addEventListener("install", event => {
+    console.log("installing...");
+    event.waitUntil(
+        caches
+            .open(cache_name)
+            .then(cache => {
+                return cache.addAll(assets);
+            })
+            .catch(err => console.log(err))
+    );
+});
 
 const ASSETS = [
     "/js/animations.js",
@@ -17,30 +30,22 @@ const ASSETS = [
     "/SIMPLIFICA.ttf",
     "/images/icons-192.png",
     "/images/icons-512.png",
+    "/images/pause.png",
+    "/images/reset.png",
     "/offline.html",
     "/manifest.webmanifest"
 ];
 
-let cache_name = "NeonCity"; // The string used to identify our cache
 
-self.addEventListener("install", event => {
-    console.log("installing...");
-    event.waitUntil(
-        caches
-            .open(cache_name)
-            .then(cache => {
-                return cache.addAll(ASSETS);
-            })
-            .catch(err => console.log(err))
-    );
-});
-
+// sw.js
+/*
 self.addEventListener("fetch", event => {
     console.log("You fetched " + event.url);
 });
+*/
 
 self.addEventListener("fetch", event => {
-    if (event.request.url === "https://www.michaelprimo.it") {
+    if (event.request.url === "https://www.simicart.com/") {
         // or whatever your app's URL is
         event.respondWith(
             fetch(event.request).catch(err =>
