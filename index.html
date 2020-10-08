@@ -40,18 +40,11 @@
         <div class="center">
             <button id="buttonReset" aria-label="Reset" class="bigButtonSize"><img class="imgButtonSize" alt="Reset" src="images/reset.png"></button> 
             <button id="buttonPause" aria-label="Pause" class="bigButtonSize"><img class="imgButtonSize" alt="Pause" src="images/pause.png"></button>
-            <!--button id="buttonMission" class="bigButtonSize">M</button--> 
-            <!--button id="buttonShare" class="bigButtonSize">S</button-->
         </div>
 
         <p class="headerText center"><span class=" animationEnabled " style="background-color: inherit !important";>Level:</span>  <span id="levelsText">1</span> </p>
         <div id="boxSize" class="center">
             <p id="gameOverText" class="boxText">Reach the exact amount of points for win!</p> 
-           <!-- <a target="_blank" class="facebook-share-button fbc-has-badge fbc-UID_1" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//">Facebook</a>
-            <div class="twitter-button-wrapper">
-                <a class="twitter-share-button"href="https://twitter.com/intent/tweet?text=" target="_blank" data-size="default">
-                Tweet</a>
-            </div> -->
         </div> 
      
     </div>
@@ -79,12 +72,11 @@
             if ('serviceWorker' in navigator) {
               // Use the window load event to keep the page load performant
               window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js');
+                navigator.serviceWorker.register('/sw.js');
               });
             }
         </script>
             
-        <script src="workbox-sw.js"></script>
         <script src="js/animations.js"></script>
         <script src="js/countdown.js"></script>
         <script src="js/reset.js"></script>
@@ -92,7 +84,6 @@
         <script src="js/state.js"></script>
         <script src="js/check.js"></script>
         <script src="js/generate.js"></script>
-        <script src="register-sw.js"></script>
         <script src="js/index.js"></script>
         <script src="sw.js"></script>
        
