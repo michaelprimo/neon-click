@@ -96,8 +96,12 @@ body
 
 .errorButton
 {
-    background-color: #4d1635;
-    box-shadow: none;
+    background-color: #35020a !important;
+    -webkit-background-color: #35020a !important;
+    -moz-background-color:#35020a !important;
+    -webkit-box-shadow: 1px 4px 3px 5px #dd0000 !important;
+    box-shadow: 1px 4px 3px 5px #dd0000 !important;
+    -moz-box-shadow: 1px 4px 3px 5px #dd0000 !important;
 }
 
 .buttonSize
@@ -314,4 +318,10 @@ a
 .button_bottom
 {
     margin-bottom: 5px;
+}
+
+.webkit-removeShadow
+{
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
 }

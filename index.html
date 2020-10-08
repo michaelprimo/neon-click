@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Neon City</title>
-        <meta name="description" content="">
+        <meta name="description" content="neon city, game, mobile">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,12 +34,12 @@
         <div id="fb-root"></div>
      
         <div id="nameText" class="headerText">
-            <span class="red animationEnabled" style="background-color: inherit !important";>N</span><span class="orange animationEnabled " style="background-color: inherit !important";>e</span><span class="yellow animationEnabled " style="background-color: inherit !important";>o</span><span class="green animationEnabled " style="background-color: inherit !important";>n</span> <span class="teal animationEnabled " style="background-color: inherit !important";>C</span><span class="blue animationEnabled " style="background-color: inherit !important";>i</span><span class="magenta animationEnabled " style="background-color: inherit !important";>t</span><span class="purple animationEnabled " style="background-color: inherit !important";>y</span> 
+            <span class="red animationEnabled webkit-removeShadow" style="background-color: inherit !important";>N</span><span class="orange animationEnabled webkit-removeShadow" style="background-color: inherit !important";>e</span><span class="yellow animationEnabled webkit-removeShadow" style="background-color: inherit !important";>o</span><span class="green animationEnabled webkit-removeShadow" style="background-color: inherit !important";>n</span> <span class="teal animationEnabled webkit-removeShadow" style="background-color: inherit !important";>C</span><span class="blue animationEnabled webkit-removeShadow" style="background-color: inherit !important";>i</span><span class="magenta animationEnabled webkit-removeShadow" style="background-color: inherit !important";>t</span><span class="purple animationEnabled webkit-removeShadow" style="background-color: inherit !important";>y</span> 
         </div>
 
         <div class="center">
-            <button id="buttonReset" class="bigButtonSize"><img class="imgButtonSize" src="images/reset.png"></button> 
-            <button id="buttonPause" class="bigButtonSize"><img class="imgButtonSize" src="images/pause.png"></button>
+            <button id="buttonReset" aria-label="Reset" class="bigButtonSize"><img class="imgButtonSize" alt="Reset" src="images/reset.png"></button> 
+            <button id="buttonPause" aria-label="Pause" class="bigButtonSize"><img class="imgButtonSize" alt="Pause" src="images/pause.png"></button>
             <!--button id="buttonMission" class="bigButtonSize">M</button--> 
             <!--button id="buttonShare" class="bigButtonSize">S</button-->
         </div>
@@ -48,7 +49,7 @@
             <p id="gameOverText" class="boxText">Reach the exact amount of points for win!</p> 
            <!-- <a target="_blank" class="facebook-share-button fbc-has-badge fbc-UID_1" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//">Facebook</a>
             <div class="twitter-button-wrapper">
-                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=" target="_blank" data-size="default">
+                <a class="twitter-share-button"href="https://twitter.com/intent/tweet?text=" target="_blank" data-size="default">
                 Tweet</a>
             </div> -->
         </div> 
@@ -93,5 +94,16 @@
         <script src="js/generate.js"></script>
         <script src="js/index.js"></script>
         <script src="service-worker.js"></script>
+        <script src="register-sw.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179975579-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-179975579-1');
+        </script>
+
     </body>
 </html>

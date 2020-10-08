@@ -21,8 +21,8 @@
 
 @keyframes redColor
 {
-    0% { color: #fc0e3480; -webkit-background-color: #5D000080; -moz-background-color: #5D000080; background-color: #5D000080; -webkit-box-shadow: 1px 0px 3px 5px; #5D000080;}
-    100% {color: #fc0e34ff; -webkit-background-color: #5D0000ff; -moz-background-color: #5D0000ff; background-color: #5D0000ff; -webkit-box-shadow: 1px 0px 3px 5px; #5D0000ff;}
+    0% { color: #fc0e3480; -webkit-background-color: #5D000080; -moz-background-color: #5D000080; background-color: #5D000080; -webkit-box-shadow: 1px 0px 3px 5px #5D000080;}
+    100% {color: #fc0e34ff; -webkit-background-color: #5D0000ff; -moz-background-color: #5D0000ff; background-color: #5D0000ff; -webkit-box-shadow: 1px 3px 3px 5px #5D0000ff;}
 }
 
 .orange
@@ -32,8 +32,8 @@
 
 @keyframes orangeColor
 {
-    0% { color: #ffcf0980; -webkit-background-color: #61490080; -moz-background-color: #61490080; background-color: #61490080; -webkit-box-shadow: 1px 0px 3px 5px; #61490080;}
-    100% {color: #ffcf09ff; -webkit-background-color: #614900ff; -moz-background-color: #614900ff; background-color: #614900ff; -webkit-box-shadow: 1px 0px 3px 5px; #614900ff;}
+    0% { color: #ffcf0980; -webkit-background-color: #61490080; -moz-background-color: #61490080; background-color: #61490080; -webkit-box-shadow: 1px 0px 3px 5px #ffcf0980;}
+    100% {color: #ffcf09ff; -webkit-background-color: #614900ff; -moz-background-color: #614900ff; background-color: #614900ff; -webkit-box-shadow: 1px 3px 3px 5px #ffcf09ff;}
 }
 
 .yellow
@@ -43,8 +43,8 @@
 
 @keyframes yellowColor
 {
-    0% { color: #dfff1180; -webkit-background-color: #45420b80; -moz-background-color: #45420b80; background-color: #45420b80; -webkit-box-shadow: 1px 0px 3px 5px; #45420b80;}
-    100% {color: #dfff11ff; -webkit-background-color: #45420bff; -moz-background-color: #45420bff; background-color: #45420bff; -webkit-box-shadow: 1px 0px 3px 5px; #45420bff;}
+    0% { color: #dfff1180; -webkit-background-color: #45420b80; -moz-background-color: #45420b80; background-color: #45420b80; -webkit-box-shadow: 1px 0px 3px 5px #dfff1180;}
+    100% {color: #dfff11ff; -webkit-background-color: #45420bff; -moz-background-color: #45420bff; background-color: #45420bff; -webkit-box-shadow: 1px 3px 3px 5px #dfff11ff;}
 } 
 
 .green
@@ -54,8 +54,8 @@
 
 @keyframes greenColor
 {
-    0% { color: #21fc0d80; -webkit-background-color: #2e4c0180; -moz-background-color: #2e4c0180; background-color: #2e4c0180; -webkit-box-shadow: 1px 0px 3px 5px; #2e4c0180;}
-    100% {color: #21fc0dff; -webkit-background-color: #2e4c01ff; -moz-background-color: #2e4c01ff; background-color: #2e4c01ff; -webkit-box-shadow: 1px 0px 3px 5px; #2e4c01ff;}
+    0% { color: #21fc0d80; -webkit-background-color: #2e4c0180; -moz-background-color: #2e4c0180; background-color: #2e4c0180; -webkit-box-shadow: 1px 0px 3px 5px #21fc0d80;}
+    100% {color: #21fc0dff; -webkit-background-color: #2e4c01ff; -moz-background-color: #2e4c01ff; background-color: #2e4c01ff; -webkit-box-shadow: 1px 3px 3px 5px #21fc0dff;}
 } 
 
 .teal
@@ -65,8 +65,8 @@
 
 @keyframes tealColor
 {
-    0% { color: #01f9c680; -webkit-background-color: #14542d80; -moz-background-color: #14542d80; background-color: #14542d80; -webkit-box-shadow: 1px 0px 3px 5px; #14542d80;}
-    100% {color: #01f9c6ff; -webkit-background-color: #14542dff; -moz-background-color: #14542dff; background-color: #14542dff; -webkit-box-shadow: 1px 0px 3px 5px; #14542dff;}
+    0% { color: #01f9c680; -webkit-background-color: #14542d80; -moz-background-color: #14542d80; background-color: #14542d80; -webkit-box-shadow: 1px 0px 3px 5px #01f9c680;}
+    100% {color: #01f9c6ff; -webkit-background-color: #14542dff; -moz-background-color: #14542dff; background-color: #14542dff; -webkit-box-shadow: 1px 3px 3px 5px #01f9c6ff;}
 } 
 
 .cyan
@@ -76,8 +76,8 @@
 
 @keyframes cyanColor
 {
-    0% { color: #0ff0fc80; -webkit-background-color: #285d5380; -moz-background-color: #285d5380; background-color: #285d5380; -webkit-box-shadow: 1px 0px 3px 5px; #285d5380;}
-    100% {color: #0ff0fcff; -webkit-background-color: #285d53ff; -moz-background-color: #285d53ff; background-color: #285d53ff; -webkit-box-shadow: 1px 0px 3px 5px; #285d53ff;}
+    0% { color: #0ff0fc80; -webkit-background-color: #285d5380; -moz-background-color: #285d5380; background-color: #285d5380; -webkit-box-shadow: 1px 0px 3px 5px #0ff0fc80;}
+    100% {color: #0ff0fcff; -webkit-background-color: #285d53ff; -moz-background-color: #285d53ff; background-color: #285d53ff; -webkit-box-shadow: 1px 3px 3px 5px #0ff0fcff;}
 } 
 
 .blue
@@ -87,8 +87,8 @@
 
 @keyframes blueColor
 {
-    0% { color: #6600ff80; -webkit-background-color: #05034780; -moz-background-color: #05034780; background-color: #05034780; -webkit-box-shadow: 1px 0px 3px 5px; #05034780;}
-    100% {color: #6600ffff; -webkit-background-color: #050347ff; -moz-background-color: #050347ff; background-color: #050347ff; -webkit-box-shadow: 1px 0px 3px 5px; #050347ff;}
+    0% { color: #6600ff80; -webkit-background-color: #05034780; -moz-background-color: #05034780; background-color: #05034780; -webkit-box-shadow: 1px 0px 3px 5px #6600ff80;}
+    100% {color: #6600ffff; -webkit-background-color: #050347ff; -moz-background-color: #050347ff; background-color: #050347ff; -webkit-box-shadow: 1px 3px 3px 5px #6600ffff;}
 } 
 
 .magenta
@@ -98,8 +98,8 @@
 
 @keyframes magentaColor
 {
-    0% { color: #ff08e880; -webkit-background-color: #45086780; -moz-background-color: #45086780; background-color: #45086780; -webkit-box-shadow: 1px 0px 3px 5px; #45086780;}
-    100% {color: #ff08e8ff; -webkit-background-color: #450867ff; -moz-background-color: #450867ff; background-color: #450867ff; -webkit-box-shadow: 1px 0px 3px 5px; #450867ff;}
+    0% { color: #ff08e880; -webkit-background-color: #45086780; -moz-background-color: #45086780; background-color: #45086780; -webkit-box-shadow: 1px 0px 3px 5px #ff08e880;}
+    100% {color: #ff08e8ff; -webkit-background-color: #450867ff; -moz-background-color: #450867ff; background-color: #450867ff; -webkit-box-shadow: 1px 3px 3px 5px #ff08e8ff;}
 } 
 
 .pink
@@ -109,8 +109,8 @@
 
 @keyframes pinkColor
 {
-    0% { color: #f800a380; -webkit-background-color: #5c024a80; -moz-background-color: #5c024a80; background-color: #5c024a80; -webkit-box-shadow: 1px 0px 3px 5px; #5c024a80;}
-    100% {color: #f800a3ff; -webkit-background-color: #5c024aff; -moz-background-color: #5c024aff; background-color: #5c024aff; -webkit-box-shadow: 1px 0px 3px 5px; #5c024aff;}
+    0% { color: #f800a380; -webkit-background-color: #5c024a80; -moz-background-color: #5c024a80; background-color: #5c024a80; -webkit-box-shadow: 1px 0px 3px 5px #f800a380;}
+    100% {color: #f800a3ff; -webkit-background-color: #5c024aff; -moz-background-color: #5c024aff; background-color: #5c024aff; -webkit-box-shadow: 1px 3px 3px 5px #f800a3ff;}
 } 
 
 .purple
@@ -120,6 +120,6 @@
 
 @keyframes purpleColor
 {
-    0% { color: #bc13fe80; -webkit-background-color: #2b034180; -moz-background-color: #2b034180; background-color: #2b034180; -webkit-box-shadow: 1px 0px 3px 5px; #2b034180;}
-    100% {color: #bc13feff; -webkit-background-color: #2b0341ff; -moz-background-color: #2b0341ff; background-color: #2b0341ff; -webkit-box-shadow: 1px 0px 3px 5px; #2b0341ff;}
+    0% { color: #bc13fe80; -webkit-background-color: #2b034180; -moz-background-color: #2b034180; background-color: #2b034180; -webkit-box-shadow: 1px 0px 3px 5px #bc13fe80;}
+    100% {color: #bc13feff; -webkit-background-color: #2b0341ff; -moz-background-color: #2b0341ff; background-color: #2b0341ff; -webkit-box-shadow: 1px 3px 3px 5px #bc13feff;}
 } 
