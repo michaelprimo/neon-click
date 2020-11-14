@@ -4,13 +4,13 @@
   }
 
   @font-face {
-    font-family: automania;
-    src: url(AUTOMANI.TTF);
+    font-family: neon;
+    src: url(Neon.ttf);
   }
 
 #nameText
 {
-    font-family: automania;
+    font-family: neon;
     font-weight: 400;
     font-size: 60px;
     background-color: inherit !important;
@@ -92,6 +92,7 @@ body
     font-family: 'simplifica';
     letter-spacing: 3px;
     font-size: 40px;
+    position: relative;
 }
 
 .errorButton
@@ -326,4 +327,8 @@ a
     -webkit-box-shadow: none !important;
 }
 
+#mainContainer
+{
+    margin: auto;
+}
 
