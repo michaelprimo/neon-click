@@ -64,6 +64,18 @@
     align-items:center;
 }
 
+.sloganText
+{
+    font-size: 30px;
+    text-align: center;
+    color: #d0d1d3;
+    margin-bottom: 30px;
+}
+
+.mt20
+{
+    margin-top: 20px;
+}
 
 .animationEnabled
 {
