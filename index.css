@@ -92,7 +92,9 @@
 body
 {
     user-select: none;
-    background-color: #0A0A08;
+    background-color: #0A0A0822;
+    background-image: url(images/wallpaper.jpg);
+    
     background-position: center 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
