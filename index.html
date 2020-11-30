@@ -74,16 +74,6 @@
            <p>Sum the exact points of the center to pass the level!</p>
            <p>How many levels you can do in 60 seconds?</p> 
         </div>
-
-        <script>
-            // Check that service workers are supported
-            if ('serviceWorker' in navigator) {
-              // Use the window load event to keep the page load performant
-              window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js');
-              });
-            }
-        </script>
             
         <script src="js/animations.js"></script>
         <script src="js/countdown.js"></script>
@@ -94,7 +84,19 @@
         <script src="js/generate.js"></script>
         <script src="js/index.js"></script>
         <script src="sw.js"></script>
-       
+        <script>
+            if('serviceWorker' in navigator) {
+              navigator.serviceWorker.register('/sw.js', { scope: '/' })
+                .then(function(registration) {
+                      console.log('Service Worker Registered');
+                });
+      
+              navigator.serviceWorker.ready.then(function(registration) {
+                 console.log('Service Worker Ready');
+              });
+            }
+      
+          </script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179975579-1"></script>
         <script>
