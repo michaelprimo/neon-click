@@ -1,4 +1,4 @@
-const version = "1.0.0";
+const version = "1.0.1";
 const cacheName = `NeonClick-${version}`;
 self.addEventListener('install', e => {
   e.waitUntil(
@@ -22,7 +22,8 @@ self.addEventListener('install', e => {
         `/js/state.js`,
         `/AUTOMANI.TTF`,
         `/Neon.ttf`,
-        `/SIMPLIFICA.ttf`
+        `/SIMPLIFICA.ttf`,
+        `/images/reset.png`
       ])
           .then(() => self.skipWaiting());
     })

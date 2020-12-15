@@ -5,7 +5,12 @@
 
   @font-face {
     font-family: neon;
-    src: url(Neon.ttf);
+    src: url(LoveloLineBold.otf);
+  }
+
+  @font-face {
+    font-family: retro;
+    src: url(DSEG7ModernMini-Regular.ttf);
   }
 
 #nameText
@@ -58,7 +63,8 @@
     text-align: center;
     box-shadow: 1px 4px 3px 5px;
     border-radius: 20%;
-    color: #d0d1d3;
+    font-family: retro;
+    text-shadow: 0px 0px 10px#0ff0fc;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -92,7 +98,11 @@
 body
 {
     user-select: none;
-    background-color: #0A0A08;
+    background-color: rgb(14,0,49);
+    background: -moz-linear-gradient(45deg, rgba(14,0,49,1) 0%, rgba(57,0,141,1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(14,0,49,1) 0%, rgba(57,0,141,1) 100%);
+    background: linear-gradient(45deg, rgba(14,0,49,1) 0%, rgba(57,0,141,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0e0031",endColorstr="#39008d",GradientType=1); 
     background-position: center 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -109,13 +119,18 @@ body
 
 .errorButton
 {
-    background-color: #35020a !important;
-    -webkit-background-color: #35020a !important;
-    -moz-background-color:#35020a !important;
-    -webkit-box-shadow: 1px 4px 3px 5px #dd0000 !important;
-    box-shadow: 1px 4px 3px 5px #dd0000 !important;
-    -moz-box-shadow: 1px 4px 3px 5px #dd0000 !important;
+    animation-name: errorAnim !important;
+    animation-duration: 3.5s;
 }
+
+
+@keyframes errorAnim
+{
+    0% { color:#0ff0fcff; -webkit-box-shadow: 1px 0px 3px 5px  #0ff0fcff;}
+    50% {color: #000000ff; -webkit-box-shadow: 1px 3px 3px 5px #000000ff;}
+    100% { color:#0ff0fcff; -webkit-box-shadow: 1px 0px 3px 5px  #0ff0fcff;}
+} 
+
 
 .buttonSize
 {
@@ -143,44 +158,10 @@ body
     border: 1px solid black;
     font-size: 40px;
     text-align: center;
-    color: #d0d1d3;
-    box-shadow: 1px 1px 6px 6px rgb(255, 0, 0);
-    font-family: 'simplifica';
-}
-
-#buttonPause
-{
-    background-color: #000000;
-    cursor:pointer;
-    border: 1px solid black;
-    font-size: 40px;
-    text-align: center;
-    color: #d0d1d3;
-    box-shadow: 1px 1px 6px 6px rgb(1,249,198);
-    font-family: 'simplifica';
-}
-
-#buttonMission
-{
-    background-color: #000000;
-    cursor:pointer;
-    border: 1px solid black;
-    font-size: 40px;
-    text-align: center;
-    color: #d0d1d3;
-    box-shadow: 1px 1px 12px 12px rgb(3, 255, 3);
-    font-family: 'simplifica';
-}
-
-#buttonShare
-{
-    background-color: #000000;
-    cursor:pointer;
-    border: 1px solid black;
-    font-size: 40px;
-    text-align: center;
-    color: #d0d1d3;
-    box-shadow: 1px 1px 12px 12px rgb(166, 0, 255);
+   
+    color: #0ff0fc80; 
+    -webkit-box-shadow: 1px 0px 3px 5px #0ff0fc;
+    text-shadow: 0px 0px 10px cyan;  
     font-family: 'simplifica';
 }
 
@@ -197,12 +178,10 @@ p
 
 #buttonOctopus
 {
-    background: #5e7783;
-    background: linear-gradient(0deg, #5D5D5D 100%, rgba(17,36,50,1) 100%);
     margin: 0px 3px;
     cursor:pointer;
-    border: 1px solid black;
-    font-size: 30px;
+    border: 1px solid white;
+    font-size: 40px;
     text-align: center;
     box-shadow: 1px 4px 4px 4px;
     border-radius: 50%;
@@ -215,6 +194,21 @@ p
     z-index: 1;
     position: relative;
     bottom: 2.5px;
+    font-family: retro;
+    text-shadow: 0px 0px 10px white;
+}
+
+#curPointsText
+{
+display: none;
+}
+
+#divider
+{
+    font-family: retro;
+    color: #d0d1d3;
+    font-size: 48px;
+    margin-bottom: 25px;
 }
 
 #mainGame
@@ -287,7 +281,19 @@ div
 #levelsText
 {
     font-size: 48px;
-    margin-left: 10px;
+    margin-top: 0px;
+    font-family: retro;
+    text-align: center;
+    color: #d0d1d3;
+}
+
+#timer
+{
+    font-size: 48px;
+    margin-top: 0px;
+    font-family: retro;
+    text-align: center;
+    color: #d0d1d3;
 }
 
 .horizontal_space
@@ -344,3 +350,36 @@ a
     margin: auto;
 }
 
+progress[value]::-webkit-progress-value {
+    background-image:
+         -webkit-linear-gradient(-45deg, 
+                                 transparent 33%, rgba(0, 0, 0, .1) 33%, 
+                                 rgba(0,0, 0, .1) 66%, transparent 66%),
+         -webkit-linear-gradient(top, 
+                                 rgba(255, 255, 255, .25), 
+                                 rgba(0, 0, 0, .25)),
+         -webkit-linear-gradient(left, #09c, #f44);
+  
+      border-radius: 2px; 
+      background-size: 35px 20px, 100% 100%, 100% 100%;
+  }
+
+  .onedigit
+  {
+      font-size: 40px !important;
+  }
+
+  .twodigit
+  {
+      font-size: 35px !important;
+  }
+
+  .threedigit
+  {
+      font-size: 20px !important;
+  }
+
+  .fourdigit
+  {
+      font-size: 15px !important;
+  }

@@ -15,8 +15,12 @@ let palette =
 
 function timeAnimation()
 {
-    document.getElementById("buttonOctopus").style.backgroundImage = "linear-gradient(0deg, rgba(93, 93, 93, 1)"
-    + (seconds/maxSeconds) * 100 + "%, rgba(0,0,0,1) " + (seconds/maxSeconds) * 100 + "%)";
+    /*
+    document.getElementById("buttonOctopus").style.backgroundImage = "linear-gradient(0deg, rgba(0, 0, 0, 1)"
+    + (seconds/maxSeconds) * 100 + "%, rgba(0,0,0,0) " + (seconds/maxSeconds) * 100 + "%)";
+    */
+   //document.getElementById("buttonOctopus").style.backgroundColor = "rgba(0,0,0," + 1 + ")";
+   document.getElementById("buttonOctopus").style.backgroundImage = "linear-gradient(0deg, rgba(0, 0, 0," + (seconds/maxSeconds) * 100 + ") 100%, rgba(0,0,0,0) " + (seconds/maxSeconds) * 100 + "%)";
 }
 
 function errorAnimation()
@@ -25,7 +29,7 @@ function errorAnimation()
     for(var i = 0; i < buttonClick.length; i++)
     {
         document.getElementById("button" + i).classList.add("errorButton");
-        error = setTimeout(resetErrorClass, 300);
+        error = setTimeout(resetErrorClass, 100);
     }
     function resetErrorClass()
     {

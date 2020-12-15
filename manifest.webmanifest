@@ -1,6 +1,6 @@
 {
-    "short_name": "Neon City",
-    "name": "Neon City",
+    "short_name": "Neon Click",
+    "name": "Neon Click",
     "description": "Simple Mathematical Game by Michael Primo.",
     "icons": [
       {
@@ -15,8 +15,8 @@
       }
     ],
     "start_url": "/?source=pwa",
-    "background_color": "#3367D6",
+    "background_color": "#000000",
     "display": "standalone",
     "scope": "/",
-    "theme_color": "#3367D6"
+    "theme_color": "#000000"
   }

@@ -2,9 +2,6 @@ let colorNames = ["red", "orange", "yellow", "green", "teal", "cyan", "blue", "m
 let boolPressed = false;
 // Seek all the buttons with the .numberText class and store in this variable.  
 var buttonClick = document.querySelectorAll(".numberText");
-//set pause
-let pauseEnabled = false;
-
 
  // Set the main buttons.
  for(var x = 0; x < buttonClick.length; x++)
@@ -15,9 +12,6 @@ let pauseEnabled = false;
 
 //Set the reset button by calling the function.
 setResetButton();
-
-//Set the pause button by calling the function.
-setPauseButton();
 
 //give a functionality to the reset button.
 function setResetButton()
@@ -32,46 +26,6 @@ function setResetButton()
     document.getElementById("buttonReset").addEventListener('touchstart', function() {
         //call this function if user click reset button.
         init();
-        pressAnimation();
-    }, false);
-}
-
-//give a functionality to the pause button.
-function setPauseButton()
-{
-    //mouse version of clicking the reset button
-    document.getElementById("buttonPause").addEventListener('mousedown', function() {
-        //call this function if user click reset button.
-        pauseEnabled = !pauseEnabled;
-        if(pauseEnabled == false)
-        {
-            document.getElementById("mainGame").classList.remove("fadeOut");
-            document.getElementById("mainGame").classList.add("fadeIn");
-            document.getElementById('mainGame').classList.remove("hide");
-            document.getElementById('mainGame').classList.add("show");
-            document.getElementById("boxSize").classList.add("fadeOut");
-            document.getElementById("boxSize").classList.remove("fadeIn");
-            document.getElementById('boxSize').classList.remove("show");
-            document.getElementById('boxSize').classList.add("hide");
-            //reset the "start" variable.
-            start = new Date().getTime();
-            //this helps avoiding artificial lags when unpausing the game. 
-            time = 0;
-            //activate the countdown if the player unpause the game.
-            countdown();
-        }
-        else
-        {
-            document.getElementById("mainGame").classList.add("fadeOut");
-            document.getElementById("mainGame").classList.remove("fadeIn");
-            document.getElementById('mainGame').classList.add("hide");
-            document.getElementById('mainGame').classList.remove("show");
-            document.getElementById("boxSize").classList.remove("fadeOut");
-            document.getElementById("boxSize").classList.add("fadeIn");
-            document.getElementById('boxSize').classList.add("show");
-            document.getElementById('boxSize').classList.remove("hide");
-            document.getElementById("gameOverText").innerHTML = "Paused";
-        }
         pressAnimation();
     }, false);
 }
@@ -144,6 +98,70 @@ function editButtonsText()
     {
         document.getElementById("button" + i).innerHTML = values[i];
 
+        if(values[i] > 0 && values[i] < 10)
+        {
+            document.getElementById("button" + i).classList.add("onedigit");
+            document.getElementById("button" + i).classList.remove("twodigit");
+            document.getElementById("button" + i).classList.remove("threedigit");
+            document.getElementById("button" + i).classList.remove("fourdigit");
+        }
+
+        if(values[i] >= 10 && values[i] < 100)
+        {
+            document.getElementById("button" + i).classList.remove("onedigit");
+            document.getElementById("button" + i).classList.add("twodigit");
+            document.getElementById("button" + i).classList.remove("threedigit");
+            document.getElementById("button" + i).classList.remove("fourdigit");
+        }
+
+        if(values[i] >= 100 && values[i] < 1000)
+        {
+            document.getElementById("button" + i).classList.remove("onedigit");
+            document.getElementById("button" + i).classList.remove("twodigit");
+            document.getElementById("button" + i).classList.add("threedigit");
+            document.getElementById("button" + i).classList.remove("fourdigit");
+        }
+
+        if(values[i] >= 1000 && values[i] < 10000)
+        {
+            document.getElementById("button" + i).classList.remove("onedigit");
+            document.getElementById("button" + i).classList.remove("twodigit");
+            document.getElementById("button" + i).classList.remove("threedigit");
+            document.getElementById("button" + i).classList.add("fourdigit");
+        }
+
+        if(maxPoints > 0 && maxPoints < 10)
+        {
+            document.getElementById("buttonOctopus").classList.add("onedigit");
+            document.getElementById("buttonOctopus").classList.remove("twodigit");
+            document.getElementById("buttonOctopus").classList.remove("threedigit");
+            document.getElementById("buttonOctopus").classList.remove("fourdigit");
+        }
+
+        if(maxPoints >= 10 && maxPoints < 100)
+        {
+            document.getElementById("buttonOctopus").classList.remove("onedigit");
+            document.getElementById("buttonOctopus").classList.add("twodigit");
+            document.getElementById("buttonOctopus").classList.remove("threedigit");
+            document.getElementById("buttonOctopus").classList.remove("fourdigit");
+        }
+
+        if(maxPoints >= 100 && maxPoints < 1000)
+        {
+            document.getElementById("buttonOctopus").classList.remove("onedigit");
+            document.getElementById("buttonOctopus").classList.remove("twodigit");
+            document.getElementById("buttonOctopus").classList.add("threedigit");
+            document.getElementById("buttonOctopus").classList.remove("fourdigit");
+        }
+
+        if(maxPoints >= 1000 && maxPoints < 10000)
+        {
+            document.getElementById("buttonOctopus").classList.remove("onedigit");
+            document.getElementById("buttonOctopus").classList.remove("twodigit");
+            document.getElementById("buttonOctopus").classList.remove("threedigit");
+            document.getElementById("buttonOctopus").classList.add("fourdigit");
+        }
+
         // Verify if to put or remove certain classes on certain conditions of the buttons.
 
         // remove the class because the button is not pressed. 
@@ -164,16 +182,16 @@ function editButtonsText()
                 
                 for(var k = 0; k < colorNames.length; k++)
                 {
-                    document.getElementById("button" + i).classList.remove(colorNames[k]);
+                    document.getElementById("button" + i).classList.remove("cyan");
                     document.getElementById("button" + i).classList.remove("white");
                 }
                 if(boolPressed == true)
                 {
-                    document.getElementById("button" + i).classList.add("white");
+                    document.getElementById("button" + i).classList.add("yellow");
                 }
                 else
                 {
-                    document.getElementById("button" + i).classList.add(colorNames[j]);
+                    document.getElementById("button" + i).classList.add("cyan");
                 }
                 
             }

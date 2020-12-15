@@ -33,8 +33,8 @@
     <body>
         <div id="mainContainer">
             <div id="nameText" class="headerText">
-                <span class="red animationEnabled webkit-removeShadow" style="background-color: inherit !important";>N</span><span class="orange animationEnabled webkit-removeShadow" style="background-color: inherit !important";>e</span><span class="yellow animationEnabled webkit-removeShadow" style="background-color: inherit !important";>o</span><span class="green animationEnabled webkit-removeShadow" style="background-color: inherit !important";>n</span>
-                <span class="teal animationEnabled webkit-removeShadow" style="background-color: inherit !important";>C</span><span class="blue animationEnabled webkit-removeShadow" style="background-color: inherit !important";>l</span><span class="magenta animationEnabled webkit-removeShadow" style="background-color: inherit !important";>i</span><span class="pink animationEnabled webkit-removeShadow" style="background-color: inherit !important";>c</span><span class="purple animationEnabled webkit-removeShadow" style="background-color: inherit !important";>k</span> 
+                <span class="cyan animationEnabled webkit-removeShadow" style="background-color: inherit !important";>N</span><span class="cyan animationEnabled webkit-removeShadow" style="background-color: inherit !important";>e</span><span class="cyan animationEnabled webkit-removeShadow" style="background-color: inherit !important";>o</span><span class="cyan animationEnabled webkit-removeShadow" style="background-color: inherit !important";>n</span>
+                <span class="yellow animationEnabled webkit-removeShadow" style="background-color: inherit !important";>C</span><span class="yellow animationEnabled webkit-removeShadow" style="background-color: inherit !important";>l</span><span class="yellow animationEnabled webkit-removeShadow" style="background-color: inherit !important";>i</span><span class="yellow animationEnabled webkit-removeShadow" style="background-color: inherit !important";>c</span><span class="yellow animationEnabled webkit-removeShadow" style="background-color: inherit !important";>k</span> 
             </div>
             
             <div class="sloganText">
@@ -43,10 +43,22 @@
 
             <div class="center">
                 <button id="buttonReset" aria-label="Reset" class="bigButtonSize"><img class="imgButtonSize" alt="Reset" src="images/reset.png"></button> 
-                <button id="buttonPause" aria-label="Pause" class="bigButtonSize"><img class="imgButtonSize" alt="Pause" src="images/pause.png"></button>
             </div>
-    
-            <p class="headerText center"><span class=" animationEnabled " style="background-color: inherit !important";>Level:</span>  <span id="levelsText">1</span> </p>
+            <!--
+            <div class="center animationEnabled" style="background-color: inherit !important">
+                <p class="headerText">Level </p>
+                <p class="headerText">Time </p>
+            </div>
+            -->
+            <div class="center animationEnabled">
+                <p class="headerText" id="levelsText">1</p>
+                <span id="divider">||</span>
+                <p class="headerText" id="timer">1</span>
+            </div>
+            
+            
+           
+
             <div id="boxSize" class="center">
                 <p id="gameOverText" class="boxText">Reach the exact amount of points for win!</p> 
             </div> 
@@ -59,7 +71,7 @@
                 <div class="break"></div>
 
                 <div id="button3"  class="numberText buttonSize animationEnabled" value="4"></div>
-                <div id="buttonOctopus"><span id="curPointsText">0</span>/<span id="maxPointsText">0</span></div>
+                <div id="buttonOctopus"><span id="curPointsText">0</span><span id="maxPointsText">0</span></div>
                 <div id="button4"  class="numberText buttonSize animationEnabled" value="5"></div>
                 <div class="break"></div>
                 
