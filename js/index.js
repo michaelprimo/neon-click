@@ -32,12 +32,12 @@ function updateText()
     // update the text to the actual curPoints value.
     document.getElementById("curPointsText").innerHTML = curPoints;
     // update the text to the actual level value.
-    document.getElementById("levelsText").innerHTML = "L: " +levels;
+    document.getElementById("levelsText").innerHTML = "Level: " +levels;
    
     timeAnimation();
 
     // update the text of the time counter.
-    counter.innerHTML = "T: " + (seconds < 10 ? "0" : "") + String(seconds.toFixed(0));
+    //counter.innerHTML = "T: " + (seconds < 10 ? "0" : "") + String(seconds.toFixed(0));
     textHandle=setTimeout(updateText, 100);
 }
 

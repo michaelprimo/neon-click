@@ -24,7 +24,7 @@ var i = 0;
 //manage the updateText handle.
 var textHandle;
 //gets the timer text for editing it later.
-var counter = document.getElementById("timer");
+//var counter = document.getElementById("timer");
 
 // Reset some variable about the game
 function resetLevelsTimer()

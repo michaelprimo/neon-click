@@ -15,12 +15,12 @@ let palette =
 
 function timeAnimation()
 {
-    /*
-    document.getElementById("buttonOctopus").style.backgroundImage = "linear-gradient(0deg, rgba(0, 0, 0, 1)"
-    + (seconds/maxSeconds) * 100 + "%, rgba(0,0,0,0) " + (seconds/maxSeconds) * 100 + "%)";
-    */
+    
+    document.getElementById("buttonOctopus").style.backgroundImage = "linear-gradient(0deg, rgba(110, 110, 0, 1)"
+    + (seconds/maxSeconds) * 100 + "%, rgba(0,0,0,1) " + (seconds/maxSeconds) * 100 + "%)";
+    
    //document.getElementById("buttonOctopus").style.backgroundColor = "rgba(0,0,0," + 1 + ")";
-   document.getElementById("buttonOctopus").style.backgroundImage = "linear-gradient(0deg, rgba(0, 0, 0," + (seconds/maxSeconds) * 100 + ") 100%, rgba(0,0,0,0) " + (seconds/maxSeconds) * 100 + "%)";
+   //document.getElementById("buttonOctopus").style.backgroundImage = "linear-gradient(0deg, rgba(0, 0, 0," + (seconds/maxSeconds) * 100 + ") 100%, rgba(0,0,0,0) " + (seconds/maxSeconds) * 100 + "%)";
 }
 
 function errorAnimation()
