@@ -10,7 +10,7 @@
 
   @font-face {
     font-family: retro;
-    src: url(SIMPLIFICA.ttf);
+    src: url(DSEG7ModernMini-Regular.ttf);
   }
 
 #nameText
@@ -155,7 +155,7 @@ body
 {
     background-color: #000000;
     cursor:pointer;
-    border: 1px solid black;
+    border: 1px solid white;
     font-size: 40px;
     text-align: center;
     margin-bottom: 10px;

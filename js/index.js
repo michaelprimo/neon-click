@@ -16,8 +16,6 @@ function init()
     resetLevelsTimer();
     // update text.
     updateText();
-    //adapt text based on the digits of the number contained in the button.
-    adaptText();
     //unlock the grid and the game
     gameOver = false;
 }
