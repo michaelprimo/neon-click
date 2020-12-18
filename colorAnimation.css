@@ -30,7 +30,7 @@
 {
     animation-name: cyanColor; 
     text-shadow: 0px 0px 10px cyan;  
-    animation-duration: 0.2s;
+    animation-duration: 0.5s;
 }
 
 @keyframes cyanColor
@@ -62,3 +62,4 @@
     0% { color: #0ff0fc80;}
     100% {color: #0ff0fcff;}
 } 
+
