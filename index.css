@@ -120,7 +120,7 @@ body
 .errorButton
 {
     animation-name: errorAnim !important;
-    animation-duration: 3.5s;
+    animation-duration: 0.5s !important;
 }
 
 

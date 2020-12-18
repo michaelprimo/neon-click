@@ -17,26 +17,26 @@
 {
     animation-name: yellowColor;
     text-shadow: 0px 0px 10px yellow;  
-    top: 4px; 
+    animation-duration: 0.2s;
 }
 
 @keyframes yellowColor
 {
-    0% { color: #dfff1180; -webkit-box-shadow: 1px 0px 3px 5px #dfff1180;}
-    100% {color: #dfff11ff; -webkit-box-shadow: 1px 1px 1px 5px #dfff11ff;}
+    0% { color: #dfff1180; -webkit-box-shadow: 1px 0px 3px 5px #dfff1180; top: 0px;}
+    100% {color: #dfff11ff; -webkit-box-shadow: 1px 1px 1px 5px #dfff11ff; top: 4px;}
 } 
 
 .cyan
 {
     animation-name: cyanColor; 
     text-shadow: 0px 0px 10px cyan;  
-    top: 0px;
+    animation-duration: 0.2s;
 }
 
 @keyframes cyanColor
 {
-    0% { color: #0ff0fc80; -webkit-box-shadow: 1px 0px 3px 5px #0ff0fc80;}
-    100% {color: #0ff0fcff; -webkit-box-shadow: 1px 3px 3px 5px #4CC2F4ff;}
+    0% { color: #0ff0fc80; -webkit-box-shadow: 1px 0px 3px 5px #0ff0fc80; top: 4px;}
+    100% {color: #0ff0fcff; -webkit-box-shadow: 1px 3px 3px 5px #4CC2F4ff; top: 0px;}
 } 
 
 .yellowText

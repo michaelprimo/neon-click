@@ -29,7 +29,7 @@ function errorAnimation()
     for(var i = 0; i < buttonClick.length; i++)
     {
         document.getElementById("button" + i).classList.add("errorButton");
-        error = setTimeout(resetErrorClass, 100);
+        error = setTimeout(resetErrorClass, 500);
     }
     function resetErrorClass()
     {
