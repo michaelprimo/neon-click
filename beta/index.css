@@ -1,0 +1,400 @@
+@font-face {
+    font-family: simplifica;
+    src: url(SIMPLIFICA.ttf);
+  }
+
+  @font-face {
+    font-family: neon;
+    src: url(LoveloLineBold.otf);
+  }
+
+  @font-face {
+    font-family: retro;
+    src: url(DSEG7ModernMini-Regular.ttf);
+  }
+
+#nameText
+{
+    font-family: neon;
+    font-weight: 400;
+    font-size: 60px;
+    background-color: inherit !important;
+}
+
+.headerText
+{
+    font-family: simplifica;
+    text-align: center;
+    font-size: 30px;
+    color: #d0d1d3;
+    margin: 10px;
+}
+
+.boxText
+{
+    font-family: simplifica;
+    text-align: center;
+    font-size: 30px;
+    color: #d0d1d3;
+    margin: 10px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+
+  table {
+    border-collapse: collapse;
+ }
+
+.numberText
+{
+    background-color: #0A0A08;
+    background-repeat:no-repeat;
+    cursor:pointer;
+    border: 2px solid white;
+    font-size: 40px;
+    text-align: center;
+    box-shadow: 1px 4px 3px 5px;
+    border-radius: 20%;
+    font-family: simplifica;
+    text-shadow: 0px 0px 10px#0ff0fc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.sloganText
+{
+    font-size: 30px;
+    text-align: center;
+    color: #d0d1d3;
+    margin-bottom: 30px;
+}
+
+.mt20
+{
+    margin-top: 20px;
+}
+
+.animationEnabled
+{
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    position: relative;
+}
+
+.rightAlign
+{
+    text-align: right;
+}
+
+body
+{
+    user-select: none;
+    background-color: rgb(14,0,49);
+    background: -moz-linear-gradient(45deg, rgba(14,0,49,1) 0%, rgba(57,0,141,1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(14,0,49,1) 0%, rgba(57,0,141,1) 100%);
+    background: linear-gradient(45deg, rgba(14,0,49,1) 0%, rgba(57,0,141,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0e0031",endColorstr="#39008d",GradientType=1); 
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    font-family: 'simplifica';
+    letter-spacing: 3px;
+    font-size: 40px;
+    position: relative;
+}
+
+.errorButton
+{
+    animation-name: errorAnim !important;
+    animation-duration: 0.5s !important;
+}
+
+
+@keyframes errorAnim
+{
+    0% { color:#0ff0fcff; -webkit-box-shadow: 1px 0px 3px 5px  #0ff0fcff;}
+    50% {color: #000000ff; -webkit-box-shadow: 1px 3px 3px 5px #000000ff;}
+    100% { color:#0ff0fcff; -webkit-box-shadow: 1px 0px 3px 5px  #0ff0fcff;}
+} 
+
+
+.buttonSize
+{
+    width: 60px;
+    height: 60px;
+}
+
+
+.bigButtonSize
+{
+    /*width: 50px;*/
+    height: 50px;
+    margin: 0px 20px;
+}
+
+.imgButtonSize
+{
+    height: 30px;
+}
+
+#buttonReset
+{
+    background-color: #000000;
+    cursor:pointer;
+    border: 1px solid white;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #0ff0fc80; 
+    -webkit-box-shadow: 1px 0px 3px 5px #0ff0fc;
+    text-shadow: 0px 0px 10px cyan;  
+    font-family: 'simplifica';
+}
+
+p
+{
+    margin: 10px;
+}
+
+#resizeimg
+{
+    max-width: 100%;
+    height: auto;
+}
+
+#buttonOctopus
+{
+    margin: 0px 3px;
+    cursor:pointer;
+    border: 2px solid white;
+    font-size: 40px;
+    text-align: center;
+    box-shadow: 1px 4px 4px 4px;
+    border-radius: 50%;
+    color: #dfff11;
+    width: 70px;
+    height: 70px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index: 1;
+    position: relative;
+    bottom: 2.5px;
+    font-family: simplifica;
+    text-shadow: 0px 0px 10px #dfff11;
+}
+
+.pressedButton
+{
+    animation-name: resetButtonAnim !important; 
+    animation-duration: 0.3s !important;
+}
+
+
+@keyframes resetButtonAnim
+{
+    0% { color: #0ff0fc80; -webkit-box-shadow: 1px 0px 3px 5px #0ff0fc80; top: 0px;}
+    50% { color: #dfff1180; -webkit-box-shadow: 1px 0px 3px 5px #dfff1180; top: 4px;}
+    100% {color: #0ff0fcff; -webkit-box-shadow: 1px 3px 3px 5px #4CC2F4ff; top: 0px;}
+}
+
+
+#curPointsText
+{
+display: none;
+}
+
+#divider
+{
+    font-family: retro;
+    color: #d0d1d3;
+    font-size: 48px;
+    margin-bottom: 25px;
+}
+
+#mainGame
+{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+div
+{
+    margin: 1px 4px;
+}
+
+#mainGame
+{
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+ }
+ 
+ .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+ }
+
+ 
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+ }
+ 
+ .fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+ }
+ 
+ .show
+ {
+    opacity: 1;
+    display: block;
+    visibility: visible;
+ }
+
+ .hide
+ {
+    opacity: 0 !important;
+    display: none !important;
+    visibility: hidden;
+ }
+
+ #boxSize
+ {
+     width: 240px;
+     height: 240px; 
+     box-shadow: 1px 1px 10px 10px;
+    color: white;
+ }
+
+ .break {
+    flex-basis: 100%;
+    height: 0;
+  }
+
+#levelsText
+{
+    font-size: 48px;
+    margin-top: 0px;
+    font-family: simplifica;
+    text-align: center;
+    color: #d0d1d3;
+}
+
+#timer
+{
+    font-size: 48px;
+    margin-top: 0px;
+    font-family: simplifica;
+    text-align: center;
+    color: #d0d1d3;
+}
+
+.horizontal_space
+{
+    margin-right: 20px;
+    margin-left: 5px;
+}
+
+.facebook-share-button {
+    color: #394f9f;
+    font-size: 14px;
+    display: block;
+    float: left;
+    display: contents;
+}
+
+.twitter-button-wrapper
+{
+    font-size: 14px;
+    margin-right: 10px;
+    width: 61px;
+    background-color: #1c96e0;
+    border-radius: 3px;
+    color: #776e65;
+    font-family: clear sans,helvetica neue,Arial,sans-serif;
+    display: inline-block;
+}
+
+a
+{
+    font-weight: 700;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.button_top
+{
+    margin-top: 5px;
+}
+
+.button_bottom
+{
+    margin-bottom: 5px;
+}
+
+.webkit-removeShadow
+{
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+#mainContainer
+{
+    margin: auto;
+}
+
+progress[value]::-webkit-progress-value {
+    background-image:
+         -webkit-linear-gradient(-45deg, 
+                                 transparent 33%, rgba(0, 0, 0, .1) 33%, 
+                                 rgba(0,0, 0, .1) 66%, transparent 66%),
+         -webkit-linear-gradient(top, 
+                                 rgba(255, 255, 255, .25), 
+                                 rgba(0, 0, 0, .25)),
+         -webkit-linear-gradient(left, #09c, #f44);
+  
+      border-radius: 2px; 
+      background-size: 35px 20px, 100% 100%, 100% 100%;
+  }
+
+  .onedigit
+  {
+      font-size: 45px !important;
+  }
+
+  .twodigit
+  {
+      font-size: 40px !important;
+  }
+
+  .threedigit
+  {
+      font-size: 35px !important;
+  }
+
+  .fourdigit
+  {
+      font-size: 30px !important;
+  }
