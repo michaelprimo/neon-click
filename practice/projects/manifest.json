@@ -1,0 +1,26 @@
+{
+    "short_name": "Neon City",
+    "name": "Neon City",
+    "description": "Simple Mathematical Game by Michael Primo.",
+    "icons": [
+        {
+            "src": "/images/images/icons-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/images/images/icons-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "https://www.michaelprimo.it/",
+    "background_color": "#3367D6",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#3367D6",
+    "url": "https://www.michaelprimo.it/",
+    "lang": "",
+    "screenshots": [],
+    "orientation": "portrait"
+}

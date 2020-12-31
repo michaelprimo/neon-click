@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Neon Click</title>
+        <meta name="description" content="neon city, game, mobile">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="index.css" type="text/css" rel="stylesheet">
+        <link href="colorAnimation.css" type="text/css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,600&display=swap" rel="stylesheet">
+        <link rel="manifest" href="/manifest.webmanifest">
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="manifest.json"></link>
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#000000">
+    </head>
+    <body>
+        <div id="mainContainer">
+            <div id="nameText" class="headerText">
+                <span class="red animationEnabled webkit-removeShadow" style="background-color: inherit !important";>N</span><span class="orange animationEnabled webkit-removeShadow" style="background-color: inherit !important";>e</span><span class="yellow animationEnabled webkit-removeShadow" style="background-color: inherit !important";>o</span><span class="green animationEnabled webkit-removeShadow" style="background-color: inherit !important";>n</span>
+                <span class="teal animationEnabled webkit-removeShadow" style="background-color: inherit !important";>C</span><span class="blue animationEnabled webkit-removeShadow" style="background-color: inherit !important";>l</span><span class="magenta animationEnabled webkit-removeShadow" style="background-color: inherit !important";>i</span><span class="pink animationEnabled webkit-removeShadow" style="background-color: inherit !important";>c</span><span class="purple animationEnabled webkit-removeShadow" style="background-color: inherit !important";>k</span> 
+            </div>
+            
+            <div class="sloganText">
+                The pastime which makes you smarter!
+            </div>
+
+            <div class="center">
+                <button id="buttonReset" aria-label="Reset" class="bigButtonSize"><img class="imgButtonSize" alt="Reset" src="images/reset.png"></button> 
+                
+            </div>
+    
+            <p class="headerText center"><span class=" animationEnabled " style="background-color: inherit !important";>Level:</span>  <span id="levelsText">1</span> </p>
+            <div id="boxSize" class="center">
+                <p id="gameOverText" class="boxText">Reach the exact amount of points for win!</p> 
+            </div> 
+            
+            <div id="mainGame" class="center">
+                
+                <div id="button0"  class="numberText buttonSize animationEnabled" value="1"></div>
+                <div id="button1"  class="numberText buttonSize button_bottom animationEnabled" value="2"></div>
+                <div id="button2"  class="numberText buttonSize animationEnabled" value="3"></div>
+                <div class="break"></div>
+
+                <div id="button3"  class="numberText buttonSize animationEnabled" value="4"></div>
+                <div id="buttonOctopus"><span id="curPointsText">0</span>/<span id="maxPointsText">0</span></div>
+                <div id="button4"  class="numberText buttonSize animationEnabled" value="5"></div>
+                <div class="break"></div>
+                
+                <div id="button5"  class="numberText buttonSize animationEnabled" value="6"></div>
+                <div id="button6"  class="numberText buttonSize button_top animationEnabled" value="7"></div>
+                <div id="button7"  class="numberText buttonSize animationEnabled" value="8"></div>
+            
+            </div>
+        </div>
+        
+        <div class="sloganText mt20">
+           <p>Sum the exact points of the center to pass the level!</p>
+           <p>How many levels you can do in 60 seconds?</p> 
+        </div>
+
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+              // Use the window load event to keep the page load performant
+              window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+              });
+            }
+        </script>
+            
+        <script src="js/animations.js"></script>
+        <script src="js/countdown.js"></script>
+        <script src="js/reset.js"></script>
+        <script src="js/buttons.js"></script>
+        <script src="js/state.js"></script>
+        <script src="js/check.js"></script>
+        <script src="js/generate.js"></script>
+        <script src="js/index.js"></script>
+        <script src="sw.js"></script>
+       
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179975579-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-179975579-1');
+        </script>
+
+    </body>
+</html>
