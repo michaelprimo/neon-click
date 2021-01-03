@@ -401,5 +401,5 @@ progress[value]::-webkit-progress-value {
 
   .memory
 {
-    color: transparent;
+    color: transparent !important;
 }
