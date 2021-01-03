@@ -96,7 +96,7 @@ function editButtonsText()
     // This for loop gets all the buttons and then update the text at the number of values[] to the respective button.
     for(var i = 0; i < buttonClick.length; i++)
     {
-        document.getElementById("button" + i).innerHTML = values[i];
+        //document.getElementById("button" + i).innerHTML = values[i];
 
         if(values[i] > 0 && values[i] < 10)
         {

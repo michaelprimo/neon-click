@@ -1,7 +1,7 @@
 // The real "points" of the game.
 let levels = 0;
 //This will set up the maximum time of the game.
-const maxSeconds = 600000000000;
+const maxSeconds = 600000000000000;
 // The time of the game in seconds.
 var seconds = maxSeconds;
 //manage the timeout handle.
