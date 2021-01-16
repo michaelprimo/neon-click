@@ -1,0 +1,64 @@
+
+.white
+{
+    animation-name: pressColor;
+    box-shadow: 1px 0px 3px 5px;
+    top: 4px;
+}
+
+@keyframes pressColor
+{
+    0% { color: #ffffffb3;}
+    100% {color: #ffffffff;}
+    
+}
+
+.yellow
+{
+    animation-name: yellowColor;
+    text-shadow: 0px 0px 10px yellow;  
+    animation-duration: 0.2s;
+}
+
+@keyframes yellowColor
+{
+    0% { color: #fff;; -webkit-box-shadow: 1px 0px 3px 5px #dfff1180; top: 0px;}
+    100% {color: #fff;; -webkit-box-shadow: 1px 1px 1px 5px #dfff11ff; top: 4px;}
+} 
+
+.cyan
+{
+    animation-name: cyanColor; 
+    text-shadow: 0px 0px 10px cyan;  
+    animation-duration: 0.5s;
+}
+
+@keyframes cyanColor
+{
+    0% { color: #fff; -webkit-box-shadow: 1px 0px 3px 5px #0ff0fc80; top: 4px;}
+    100% {color: #fff; -webkit-box-shadow: 1px 3px 3px 5px #4CC2F4ff; top: 0px;}
+} 
+
+.yellowText
+{
+    animation-name: yellowColorText;
+    text-shadow: 0px 0px 10px yellow;   
+}
+
+@keyframes yellowColorText
+{
+    0% { color: #dfff1180;}
+    100% {color: #dfff11ff;}
+} 
+
+.cyanText
+{
+    animation-name: cyanColorText; 
+    text-shadow: 0px 0px 10px cyan;  
+}
+
+@keyframes cyanColorText
+{
+    0% { color: #0ff0fc80;}
+    100% {color: #0ff0fcff;}
+} 
