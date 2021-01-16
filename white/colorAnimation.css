@@ -22,8 +22,8 @@
 
 @keyframes yellowColor
 {
-    0% { color: #fff;; -webkit-box-shadow: 1px 0px 3px 5px #dfff1180; top: 0px;}
-    100% {color: #fff;; -webkit-box-shadow: 1px 1px 1px 5px #dfff11ff; top: 4px;}
+    0% { color: #fff; -webkit-box-shadow: 1px 0px 3px 5px #dfff1180; top: 0px;}
+    100% {color:#fff; -webkit-box-shadow: 1px 1px 1px 5px #dfff11ff; top: 4px;}
 } 
 
 .cyan
@@ -36,7 +36,7 @@
 @keyframes cyanColor
 {
     0% { color: #fff; -webkit-box-shadow: 1px 0px 3px 5px #0ff0fc80; top: 4px;}
-    100% {color: #fff; -webkit-box-shadow: 1px 3px 3px 5px #4CC2F4ff; top: 0px;}
+    100% {color:#fff; -webkit-box-shadow: 1px 3px 3px 5px #4CC2F4ff; top: 0px;}
 } 
 
 .yellowText

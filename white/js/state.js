@@ -85,6 +85,11 @@ function levelUp()
          if(toggle[i] == true)
          {
              values[i]++;
+             if(values[i] >= 10)
+             {
+                 values[i] = 1;
+                 levels++;
+             }
          }
      }
 }
