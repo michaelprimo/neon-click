@@ -49,6 +49,7 @@ function setMaxPoints()
 
     //reset the variable
     maxPoints = 0;
+   
     // sum the results and generate the combination.
     for(var i = 0; i < randGenerator.length; i++)
     {
@@ -87,8 +88,10 @@ function levelUp()
              values[i]++;
              if(values[i] >= 10)
              {
-                 values[i] = 1;
-                 levels++;
+                levels++;
+                seconds += 1;
+                values[i] = 1;
+                 
              }
          }
      }
