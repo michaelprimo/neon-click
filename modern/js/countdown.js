@@ -23,10 +23,10 @@ else
 // The Experience you got in the level.
 let gameExp = 0;
 // Experience required to get the next level.
-let maxExp = 1000;
+let maxExp = 1010;
 if(localStorage.getItem("maxExp") == undefined)
 {
-    localStorage.setItem("maxExp", 1000);
+    localStorage.setItem("maxExp", 1010);
 }
 else
 {
