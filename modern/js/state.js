@@ -133,7 +133,7 @@ function playerLevelUp(gameExp)
         playerLevel++;
         localStorage.setItem("playerLevel", playerLevel);
         maxExp = parseInt(maxExp);
-        maxExp += parseInt((playerLevel * 1000));
+        maxExp = parseInt((playerLevel * 1000));
     }
     document.getElementById("playerSettings").innerHTML = "Player Level: " + playerLevel;
     document.getElementById("expSettings").innerHTML = " Exp: " + parseInt(Math.round(curExp)) + "/" + parseInt(maxExp);
