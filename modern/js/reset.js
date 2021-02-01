@@ -34,6 +34,7 @@ function resetLevelsTimer()
     gameOver = false;
     curPoints = 0;
     time = 1000;
+    gameExp = 0;
     document.getElementById("gameOverText").innerHTML = "Reach the exact amount of points for win!";
     document.getElementById("mainGame").classList.remove("fadeOut");
     document.getElementById("mainGame").classList.add("fadeIn");

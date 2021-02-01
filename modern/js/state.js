@@ -76,7 +76,7 @@ function levelUp()
 
     //get one more level
     levels++;
-
+    gameExp += maxPoints;
     checkMaxPoints();
 
      //every button pressed for a combination receive an extra point of value. 
@@ -89,7 +89,7 @@ function levelUp()
              if(values[i] >= 10)
              {
                 levels++;
-                seconds += 1;
+                seconds += 1 + (playerLevel/100+0.001);
                 values[i] = 1;
                  
              }
@@ -111,7 +111,9 @@ function gameOverState()
     document.getElementById("boxSize").classList.add("fadeIn");
     document.getElementById('boxSize').classList.add("show");
     document.getElementById('boxSize').classList.remove("hide");
-    document.getElementById("gameOverText").innerHTML = "Game Over! You reached level: " + levels + " And your max is: " + localStorage.getItem("maxLevels") + "!";
+    gameExp = Number(Math.round(gameExp + (gameExp / 100 * levels) + levels));
+    playerLevelUp(Number(gameExp));
+    document.getElementById("gameOverText").innerHTML = "Game Over! You reached level: " + levels + " And your max is: " + localStorage.getItem("maxLevels") + "! Exp obtained: " + gameExp + "!";
     gameOver = true;
     seconds = 0.01;
     checkMaxPoints();
@@ -120,4 +122,21 @@ function gameOverState()
         values[i] = 0;
         toggle[i] = false;
     }
+}
+
+function playerLevelUp(gameExp)
+{
+    curExp = parseInt(curExp) + parseInt(gameExp);
+    while(curExp >= maxExp)
+    {
+        //curExp -= playerLevel * 1000;
+        playerLevel++;
+        localStorage.setItem("playerLevel", playerLevel);
+        maxExp = parseInt(maxExp);
+        maxExp += parseInt((playerLevel * 1000));
+    }
+    document.getElementById("playerSettings").innerHTML = "Player Level: " + playerLevel;
+    document.getElementById("expSettings").innerHTML = " Exp: " + parseInt(Math.round(curExp)) + "/" + parseInt(maxExp);
+    localStorage.setItem("curExp", curExp);
+    localStorage.setItem("maxExp", maxExp);
 }
