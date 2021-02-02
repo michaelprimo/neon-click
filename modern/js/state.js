@@ -76,6 +76,11 @@ function levelUp()
 
     //get one more level
     levels++;
+    seconds += (playerLevel / 100);
+    if(levels / 5 == 0)
+    {
+        seconds += 1 + (playerLevel / 100);
+    }
     gameExp += maxPoints;
     checkMaxPoints();
 
