@@ -33,7 +33,7 @@ else
     maxExp = localStorage.getItem("maxExp");
 }
 //This will set up the maximum time of the game.
-const maxSeconds = 60;
+const maxSeconds = 30;
 // The time of the game in seconds.
 var seconds = maxSeconds;
 //manage the timeout handle.
