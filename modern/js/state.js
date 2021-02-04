@@ -85,12 +85,12 @@ function levelUp()
          //get a point of value for every button pressed.
          if(toggle[i] == true)
          {
-             values[i]++;
-             if(values[i] >= 10)
+             values[i] += 2;
+             if(values[i] >= 20)
              {
                 levels++;
-                seconds += 1 + (playerLevel/100+0.001);
-                values[i] = 1;
+                seconds += playerLevel/100+0.001;
+                values[i] = 2;
                  
              }
          }
@@ -120,6 +120,7 @@ function gameOverState()
     for(var i = 0; i < buttonClick.length; i++)
     {
         values[i] = 0;
+        maxValues[i] = 3;
         toggle[i] = false;
     }
 }
