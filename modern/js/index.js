@@ -31,10 +31,7 @@ function updateText()
     document.getElementById("curPointsText").innerHTML = curPoints;
     // update the text to the actual level value.
     document.getElementById("levelsText").innerHTML = "Level: " +levels;
-    // update the text to the actual level value.
-    document.getElementById("playerSettings").innerHTML = "Player Level: " + playerLevel;
-    document.getElementById("expSettings").innerHTML = " Exp: " + Math.round(curExp) + "/" + maxExp;
-
+   
     timeAnimation();
 
     // update the text of the time counter.

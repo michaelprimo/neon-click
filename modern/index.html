@@ -37,17 +37,19 @@
                 <span class="yellowText animationEnabled webkit-removeShadow" style="background-color: inherit !important";>C</span><span class="yellowText animationEnabled webkit-removeShadow" style="background-color: inherit !important";>l</span><span class="yellowText animationEnabled webkit-removeShadow" style="background-color: inherit !important";>i</span><span class="yellowText animationEnabled webkit-removeShadow" style="background-color: inherit !important";>c</span><span class="yellowText animationEnabled webkit-removeShadow" style="background-color: inherit !important";>k</span> 
             </div>
 
-            <div class="flexContainer">
-                <div class="sloganText">
-                    <p id="playerSettings">Create sums of numbers exactly like in the center! </p>
-                    <p id="expSettings">Create sums of numbers exactly like in the center! </p>
-                 </div>
-                 <div>
-                    <button id="buttonReset" aria-label="Reset" class="bigButtonSize"><img class="imgButtonSize" alt="Reset" src="images/reset.png"></button> 
-                 </div>
-            </div>
-            
+            <div class="sloganText">
+                <p>Create sums of numbers exactly like in the center! </p>
+             </div>
 
+            <div class="center">
+                <button id="buttonReset" aria-label="Reset" class="bigButtonSize"><img class="imgButtonSize" alt="Reset" src="images/reset.png"></button> 
+            </div>
+            <!--
+            <div class="center animationEnabled" style="background-color: inherit !important">
+                <p class="headerText">Level </p>
+                <p class="headerText">Time </p>
+            </div>
+            -->
             <div class="center animationEnabled">
                 <p class="headerText" id="levelsText">1</p>
             </div>
@@ -79,19 +81,17 @@
         </div>
         
         <div class="sloganText  mt20">
-            <p>Create sums of numbers exactly like in the center! </p>
+            The pastime which makes you smarter!
         </div>
 
         <script src="js/animations.js"></script>
         <script src="js/countdown.js"></script>
         <script src="js/reset.js"></script>
         <script src="js/buttons.js"></script>
-        <script src="js/powers.js"></script>
         <script src="js/state.js"></script>
         <script src="js/check.js"></script>
         <script src="js/generate.js"></script>
         <script src="js/index.js"></script>
-       
         <script src="sw.js"></script>
         <script>
             if('serviceWorker' in navigator) {

@@ -3,6 +3,7 @@
 
 let randToken = [];
 let boolIllegal = false;
+let toggleSelect = 0;
 
 storeToken();
 
@@ -49,7 +50,6 @@ function setMaxPoints()
 
     //reset the variable
     maxPoints = 0;
-   
     // sum the results and generate the combination.
     for(var i = 0; i < randGenerator.length; i++)
     {
@@ -73,30 +73,29 @@ function setMaxPoints()
 // function to call when a player make a good combination.
 function levelUp()
 {
-
+    toggleSelect = 0;
     //get one more level
     levels++;
-    seconds += (playerLevel / 100);
-    if(levels / 5 == 0)
-    {
-        seconds += 1 + (playerLevel / 100);
-    }
-    gameExp += maxPoints;
-    checkMaxPoints();
 
+    checkMaxPoints();
+    for(var i = 0; i < toggle.length; i++)
+    {
+        if(toggle[i] == true)
+        {
+            toggleSelect++;
+        }
+    }
      //every button pressed for a combination receive an extra point of value. 
      for(var i = 0; i < values.length; i++)
      {
          //get a point of value for every button pressed.
          if(toggle[i] == true)
          {
-             values[i] += 2;
-             if(values[i] >= 20)
+             values[i] += toggleSelect-1;
+             if(values[i] >= 10)
              {
-                levels++;
-                seconds += playerLevel/100+0.001;
-                values[i] = 2;
-                 
+                 values[i] = 1;
+                 levels++;
              }
          }
      }
@@ -116,33 +115,13 @@ function gameOverState()
     document.getElementById("boxSize").classList.add("fadeIn");
     document.getElementById('boxSize').classList.add("show");
     document.getElementById('boxSize').classList.remove("hide");
-    gameExp = Number(Math.round(gameExp + (gameExp / 100 * levels) + levels));
-    playerLevelUp(Number(gameExp));
-    document.getElementById("gameOverText").innerHTML = "Game Over! You reached level: " + levels + " And your max is: " + localStorage.getItem("maxLevels") + "! Exp obtained: " + gameExp + "!";
+    document.getElementById("gameOverText").innerHTML = "Game Over! You reached level: " + levels + " And your max is: " + localStorage.getItem("maxLevels") + "!";
     gameOver = true;
     seconds = 0.01;
     checkMaxPoints();
     for(var i = 0; i < buttonClick.length; i++)
     {
         values[i] = 0;
-        maxValues[i] = 3;
         toggle[i] = false;
     }
-}
-
-function playerLevelUp(gameExp)
-{
-    curExp = parseInt(curExp) + parseInt(gameExp);
-    while(curExp >= maxExp)
-    {
-        //curExp -= playerLevel * 1000;
-        playerLevel++;
-        localStorage.setItem("playerLevel", playerLevel);
-        maxExp = parseInt(maxExp);
-        maxExp += parseInt(1000 + parseInt(playerLevel * 10));
-    }
-    document.getElementById("playerSettings").innerHTML = "Player Level: " + playerLevel;
-    document.getElementById("expSettings").innerHTML = " Exp: " + parseInt(Math.round(curExp)) + "/" + parseInt(maxExp);
-    localStorage.setItem("curExp", curExp);
-    localStorage.setItem("maxExp", maxExp);
 }

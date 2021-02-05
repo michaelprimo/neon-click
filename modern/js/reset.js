@@ -5,8 +5,6 @@ let maxPoints = 1;
 
 // This array store all the variables/numbers of the buttons.
 var values = [];
-// This array store all the variables/numbers of the buttons.
-var maxValues = [];
 // This array store the information about if one particular button is pressed or not.
 var toggle = [];
 
@@ -36,7 +34,6 @@ function resetLevelsTimer()
     gameOver = false;
     curPoints = 0;
     time = 1000;
-    gameExp = 0;
     document.getElementById("gameOverText").innerHTML = "Reach the exact amount of points for win!";
     document.getElementById("mainGame").classList.remove("fadeOut");
     document.getElementById("mainGame").classList.add("fadeIn");
@@ -54,8 +51,7 @@ function resetValues()
 {
     for(var i = 0; i < buttonClick.length; i++)
     {
-        values[i] = 2;
-        maxValues[i] = 3;
+        values[i] = 1;
         toggle[i] = false;
     }
 }

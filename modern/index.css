@@ -75,7 +75,7 @@
     font-size: 30px;
     text-align: center;
     color: #d0d1d3;
-    
+    margin-bottom: 30px;
 }
 
 .mt20
@@ -397,12 +397,4 @@ progress[value]::-webkit-progress-value {
   .fourdigit
   {
       font-size: 30px !important;
-  }
-
-  .flexContainer
-  {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
   }
