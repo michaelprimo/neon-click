@@ -94,8 +94,9 @@ function levelUp()
              values[i] += toggleSelect-1;
              if(values[i] >= 10)
              {
-                 values[i] = 1;
+                 values[i] -= 9;
                  levels++;
+                 seconds++;
              }
          }
      }
