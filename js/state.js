@@ -3,6 +3,7 @@
 
 let randToken = [];
 let boolIllegal = false;
+let toggleSelect = 0;
 
 storeToken();
 
@@ -72,19 +73,31 @@ function setMaxPoints()
 // function to call when a player make a good combination.
 function levelUp()
 {
-
+    toggleSelect = 0;
     //get one more level
     levels++;
 
     checkMaxPoints();
-
+    for(var i = 0; i < toggle.length; i++)
+    {
+        if(toggle[i] == true)
+        {
+            toggleSelect++;
+        }
+    }
      //every button pressed for a combination receive an extra point of value. 
      for(var i = 0; i < values.length; i++)
      {
          //get a point of value for every button pressed.
          if(toggle[i] == true)
          {
-             values[i]++;
+             values[i] += toggleSelect-1;
+             if(values[i] >= 10)
+             {
+                 values[i] -= 9;
+                 levels++;
+                 seconds++;
+             }
          }
      }
 }
